@@ -35,15 +35,15 @@ collections:
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
           - { label: Site Email, name: siteemail, widget: string, required: false }
-          - { 
+          - {
               label: Keywords,
               name: keywords,
               widget: list,
-              field:
-                - { label: 'Keyword', name: 'keyword', widget: 'string' }
+              field: { label: 'Keyword', name: 'keyword', widget: 'string' },
             }
+          - { label: Site URL, name: siteurl, widget: string, required: false }
   - name: 'blog'
-    label: 'Blog'
+    label: 'Blog Post'
     # identifier_field: name
     folder: 'assets/content/blog'
     create: true
@@ -66,11 +66,11 @@ collections:
           summary: '{{fields.image}}',
           field: { label: 'Image', name: 'image', widget: 'image' },
         }
-  - name: 'Sections'
-    name: 'sections'
+  - name: 'sections'
+    label: 'Site Sections'
     files:
-      - label: 'Hero'
-        name: 'hero'
+      - label: 'Landing Hero'
+        name: 'landinghero'
         file: 'assets/content/site/hero.json'
         format: 'json'
         editor:
@@ -80,24 +80,23 @@ collections:
           - { label: 'Video Url', name: 'videourl', widget: 'string' }
           - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
           - { label: 'Intro Text', name: 'introtext', widget: 'markdown' }
-      - label: 'Tours'
+      - label: 'Our Tours'
         name: 'tours'
         file: 'assets/content/site/tours.json'
         format: 'json'
         editor:
           preview: false
         fields:
-          - {
-              label: 'list',
-              name: 'list',
-              widget: 'list',
-              fields:
-                - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
-                - { label: 'Name', name: 'name', widget: 'string' }
-                - { label: 'Length', name: 'length', widget: 'number' }
-                - { label: 'Cost', name: 'length', widget: 'string' }
-                - { label: 'Description', name: 'description', widget: 'markdown' }
-            }
+          - label: 'Tours'
+            name: 'tours'
+            collapsed: false
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'tour image', widget: 'image', required: true, allow_multiple: false }
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Length', name: 'length', widget: 'number' }
+              - { label: 'Cost', name: 'cost', widget: 'string' }
+              - { label: 'Description', name: 'description', widget: 'markdown' }
       - label: 'Build your own'
         name: 'buildyourown'
         file: 'assets/content/site/buildyourown.json'
@@ -105,21 +104,15 @@ collections:
         editor:
           preview: false
         fields:
-          - { label: 'Hero Image', name: 'heroimage', widget: 'image', required: true, allow_multiple: false }
-          - {
-              name: 'Options List',
-              name: 'optionslist',
-              widget: 'list',
-              fields:
-                - { label: 'Title', name: 'title', widget: 'string' }
-                - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
-            }
-          - {
-              label: 'Side Text',
-              name: 'sidetext',
-              widget: 'markdown'
-            }  
-      - label: 'About us'
+          - { label: 'Hero image', name: 'heroimage', widget: 'image', required: true, allow_multiple: false }
+          - { label: 'Side Text', name: 'sidetext', widget: 'markdown' }
+          - label: 'Options List'
+            name: 'optionslist'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
+      - label: 'About Us'
         name: 'aboutus'
         file: 'assets/content/site/aboutus.json'
         format: 'json'
@@ -128,7 +121,7 @@ collections:
         fields:
           - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
           - { label: 'Quote', name: 'quote', widget: 'markdown' }
-      - label: 'Flagship'
+      - label: 'Our Flagship'
         name: 'flagship'
         file: 'assets/content/site/flagship.json'
         format: 'json'
@@ -137,14 +130,12 @@ collections:
         fields:
           - { label: 'Video URL', name: 'videourl', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
-          - {
-              label: 'Gallery',
-              name: 'gallery',
-              widget: 'list',
-              required: true,
-              summary: {{fields.image}},
-              field: { label: 'Image', name: 'image', widget: 'image' }
-            }
+          - label: 'Images'
+            name: 'images'
+            widget: 'list'
+            required: true
+            summary: '{{ fields.image }}'
+            field: { label: 'Image', name: 'image', widget: 'image' }
       - label: 'Testimonials'
         name: 'testimonials'
         file: 'assets/content/site/testimonials.json'
@@ -153,15 +144,14 @@ collections:
           preview: false
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - {
-              label: 'List',
-              name: 'list',
-              widget: 'list',
-              fields:
-                - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
-                - { label: 'Quote', name: 'quote', widget: 'string' }
-                - { label: 'Customer Name', name: 'customername', widget: 'string' }
-            }
+          - label: 'Testimonials'
+            name: 'testimonialslist'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
+              - { label: 'Quote', name: 'quote', widget: 'string' }
+              - { label: 'Customer Name', name: 'customername', widget: 'string' }
+
       - label: 'Contact Us'
         name: 'contactus'
         file: 'assets/content/site/contactus.json'
@@ -181,14 +171,13 @@ collections:
         editor:
           preview: false
         fields:
-          - {
-              label: 'List',
-              name: 'list',
-              widget: 'list',
-              fields:
-                - { label: 'Question', name: 'question', widget: 'string' }
-                - { label: 'Answer', name: 'answer', widget: 'string' }
-            }
+          - label: 'Frequent Asked Questions'
+            name: 'faqslist'
+            widget: 'list'
+            fields:
+              - { label: 'Question', name: 'question', widget: 'string' }
+              - { label: 'Answer', name: 'answer', widget: 'string' }
+
       - label: 'Crew'
         name: 'crew'
         file: 'assets/content/site/crew.json'
@@ -197,16 +186,14 @@ collections:
           preview: false
         fields:
           - { label: 'Body', name: 'body', widget: 'markdown' }
-          - {
-              label: 'List',
-              name: 'list',
-              widget: 'list',
-              fields:
-                - { label: 'Name', name: 'name', widget: 'string' }
-                - { label: 'Role', name: 'role', widget: 'string' }
-                - { label: 'Image', name: 'image', widget: 'image', required: false, allow_multiple: false }
-                - { label: 'Blurb', name: 'blurb', widget: 'markdown' }
-            }
+          - label: 'Crew Members'
+            name: 'crewmembers'
+            widget: 'list'
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Role', name: 'role', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image', required: false, allow_multiple: false }
+              - { label: 'Blurb', name: 'blurb', widget: 'markdown' }
   # - name: 'projects'
   #   # identifier_field: name
   #   label: 'Projects'
