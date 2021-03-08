@@ -34,9 +34,17 @@ collections:
               widget: string,
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
-          # - { label: Site Email, name: siteemail, widget: string, required: false }
+          - { label: Site Email, name: siteemail, widget: string, required: false }
+          - {
+              label: Keywords,
+              name: keywords,
+              widget: list,
+              field: { label: 'Keyword', name: 'keyword', widget: 'string' },
+            }
+          - { label: Site URL, name: siteurl, widget: string, required: false }
+          - { label: 'Meta image', name: 'ogimage', widget: image, required: true, allow_multiple: false }
   - name: 'blog'
-    label: 'Blog'
+    label: 'Blog Post'
     # identifier_field: name
     folder: 'assets/content/blog'
     create: true
@@ -46,31 +54,11 @@ collections:
     #   preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'projects'
-    # identifier_field: name
-    label: 'Projects'
-    label_singular: 'Project'
-    folder: 'assets/content/projects'
-    create: true
-    format: 'json'
-    slug: '{{project_type}}-{{slug}}'
-    preview_path: 'projects/{{slug}}'
-    fields:
-      - {
-          label: 'Project Type',
-          name: 'project_type',
-          widget: 'select',
-          default: 'story',
-          options: [{ label: 'Story', value: 'story' }, { label: 'Photo', value: 'photo' }],
-        }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string', required: false }
-      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
       - {
           label: 'Gallery',
           name: 'gallery',
@@ -79,6 +67,164 @@ collections:
           summary: '{{fields.image}}',
           field: { label: 'Image', name: 'image', widget: 'image' },
         }
+  - name: 'sitesections'
+    label: 'Site Sections'
+    files:
+      - label: 'Landing Hero'
+        name: 'landinghero'
+        file: 'assets/content/site/hero.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - { label: 'Video Url', name: 'videourl', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
+          - { label: 'Intro Text', name: 'introtext', widget: 'markdown' }
+      - label: 'Our Tours'
+        name: 'tours'
+        file: 'assets/content/site/tours.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - label: 'Tours'
+            name: 'tours'
+            collapsed: false
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'tour image', widget: 'image', required: true, allow_multiple: false }
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Length', name: 'length', widget: 'number' }
+              - { label: 'Cost', name: 'cost', widget: 'string' }
+              - { label: 'Description', name: 'description', widget: 'markdown' }
+      - label: 'Build your own'
+        name: 'buildyourown'
+        file: 'assets/content/site/buildyourown.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Hero image', name: 'heroimage', widget: 'image', required: true, allow_multiple: false }
+          - { label: 'Side Text', name: 'sidetext', widget: 'markdown' }
+          - label: 'Options List'
+            name: 'optionslist'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
+      - label: 'About Us'
+        name: 'aboutus'
+        file: 'assets/content/site/aboutus.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
+          - { label: 'Quote', name: 'quote', widget: 'markdown' }
+      - label: 'Our Flagship'
+        name: 'flagship'
+        file: 'assets/content/site/flagship.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Video URL', name: 'videourl', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: 'Images'
+            name: 'images'
+            widget: 'list'
+            required: true
+            summary: '{{ fields.image }}'
+            field: { label: 'Image', name: 'image', widget: 'image' }
+      - label: 'Testimonials'
+        name: 'testimonials'
+        file: 'assets/content/site/testimonials.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - label: 'Testimonials'
+            name: 'testimonialslist'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
+              - { label: 'Quote', name: 'quote', widget: 'string' }
+              - { label: 'Customer Name', name: 'customername', widget: 'string' }
+
+      - label: 'Contact Us'
+        name: 'contactus'
+        file: 'assets/content/site/contactus.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Phone', name: 'phone', widget: 'string' }
+          - { label: 'Email', name: 'email', widget: 'string' }
+          - { label: 'Facebook', name: 'facebook', widget: 'string' }
+          - { label: 'Instagram', name: 'instagram', widget: 'string' }
+          - { label: 'Location', name: 'location', widget: 'map' }
+      - label: 'FAQs'
+        name: 'faqs'
+        file: 'assets/content/site/faqs.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - label: 'Frequent Asked Questions'
+            name: 'faqslist'
+            widget: 'list'
+            fields:
+              - { label: 'Question', name: 'question', widget: 'string' }
+              - { label: 'Answer', name: 'answer', widget: 'string' }
+
+      - label: 'Crew'
+        name: 'crew'
+        file: 'assets/content/site/crew.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: 'Crew Members'
+            name: 'crewmembers'
+            widget: 'list'
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Role', name: 'role', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image', required: false, allow_multiple: false }
+              - { label: 'Blurb', name: 'blurb', widget: 'markdown' }
+  # - name: 'projects'
+  #   # identifier_field: name
+  #   label: 'Projects'
+  #   label_singular: 'Project'
+  #   folder: 'assets/content/projects'
+  #   create: true
+  #   format: 'json'
+  #   slug: '{{project_type}}-{{slug}}'
+  #   preview_path: 'projects/{{slug}}'
+  #   fields:
+  #     - {
+  #         label: 'Project Type',
+  #         name: 'project_type',
+  #         widget: 'select',
+  #         default: 'story',
+  #         options: [{ label: 'Story', value: 'story' }, { label: 'Photo', value: 'photo' }],
+  #       }
+  #     - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+  #     - { label: 'Title', name: 'title', widget: 'string' }
+  #     - { label: 'Description', name: 'description', widget: 'string', required: false }
+  #     - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+  #     - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+  #     - {
+  #         label: 'Gallery',
+  #         name: 'gallery',
+  #         widget: 'list',
+  #         required: false,
+  #         summary: '{{fields.image}}',
+  #         field: { label: 'Image', name: 'image', widget: 'image' },
+  #       }
   # - name: 'story_projects'
   #   # identifier_field: name
   #   label: 'Story Projects'
