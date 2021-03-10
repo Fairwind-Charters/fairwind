@@ -9,10 +9,26 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   theme: {
     darkSelector: '.dark-mode',
+    fontSize: {
+      'xs': '.75rem',
+      'sm': '.875rem',
+      'tiny': '.875rem',
+      'base': '1rem',
+      'lg': '1.125rem',
+      'xl': '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+      '7xl': '5rem',
+      '8xl': '6rem',
+    },
     extend: {
       fontFamily: {
         sans: ['Karla', ...defaultTheme.fontFamily.sans],
-        mono: [...defaultTheme.fontFamily.mono]
+        mono: [...defaultTheme.fontFamily.mono],
+        logo: ['South Blue']
       },
       colors: {
         primary: {
@@ -38,7 +54,9 @@ module.exports = {
           700: '#6E1D23',
           800: '#4D1015',
           900: '#280709'
-        }
+        },
+        'fairwind-dark-blue': '#001A31',
+        'fairwind-light-blue': '#C8F0EE',
       },
       opacity: {
         '10': '0.1',

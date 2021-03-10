@@ -1,3 +1,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'South Blue';
+  font-style: normal;
+  font-weight: normal;
+  src: local('South Blue'), url(~assets/fonts/SouthBlue.otf) format('opentype');
+}
