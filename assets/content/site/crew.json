@@ -1,4 +1,12 @@
 {
-  "body": "",
-  "list": []
+  "body": "This is our crew",
+  "list": [],
+  "crewmembers": [
+    {
+      "name": "Ellen Ripley",
+      "role": "Lieutenant",
+      "image": "/img/placeholder-320x180.png",
+      "blurb": "lorem ipsum dolor sit amet"
+    }
+  ]
 }
