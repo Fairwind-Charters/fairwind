@@ -1,19 +1,19 @@
 <template>
-  <div class="flex flex-col h-screen justify-between">
-    <Header />
+  <div class="">
+    <HomeHeader />
     <nuxt />
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from '~/components/general/Header.vue'
+import HomeHeader from '~/components/general/HomeHeader.vue'
 import Footer from '~/components/general/Footer.vue'
 
 export default {
   components: {
-    Header,
     Footer,
+    HomeHeader,
   }
 }
 </script>

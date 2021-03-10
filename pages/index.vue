@@ -1,15 +1,14 @@
 <template>
   <main class="main text-center flex flex-col items-center justify-center">
-    <!-- <logo /> -->
-      <video-background
-        :src="require(`~/static/video/hero_video.mp4`)"
-        class="h-screen"
-      >
-        <div class="h-screen flex flex-col justify-center items-center">
-          <h1 class="title font-logo sm:text-8xl text-white">Fairwind Charters</h1>
-          <h2 class="text-white sm:text-2xl">Private yacht charters for all occassions</h2>
-        </div>
-      </video-background>
+    <video-background
+      :src="require(`~/static/video/hero_video.mp4`)"
+      class="h-screen"
+    >
+      <div class="h-screen flex flex-col justify-center items-center bg-black bg-opacity-20">
+        <h1 class="title font-logo sm:text-8xl text-5xl text-white">Fairwind Charters</h1>
+        <h2 class="text-white sm:text-2xl">Private yacht charters for all occassions</h2>
+      </div>
+    </video-background>
     <section id="tours">
     </section>
     <section id="instagram">
@@ -27,6 +26,7 @@
 
 <script>
 export default {
+  layout: 'home',
   data() {
     return {
       src: ``

@@ -1,9 +1,9 @@
 <template>
-  <div class="relative bg-white">
+  <div class="absolute w-full z-10 bg-opacity-0">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <span class="font-logo text-fairwind-medium-blue text-2xl">Fairwind Charters</span>
+          <span class="font-logo text-fairwind-medium-blue text-2xl"></span>
         </div>
         <div class="-mr-2 -my-2 md:hidden">
           <button
@@ -27,7 +27,7 @@
             v-for="(item, index) in items"
             :key="index"
             :to="item.href"
-            class="text-base font-medium text-menu-blue hover:text-gray-900"
+            class="text-base font-medium text-white text-lg hover:text-gray-900"
           >
             {{ item.title }}
           </nuxt-link>
@@ -60,10 +60,7 @@
       class="absolute top-0 inset-x-0 p-2 z-10 transition transform origin-top-right md:hidden">
       <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
         <div class="pt-5 pb-6 px-5">
-          <div class="flex items-center justify-between">
-            <div>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
-            </div>
+          <div class="flex items-center justify-end">
             <div class="-mr-2">
               <button 
                 type="button"
@@ -124,10 +121,6 @@ export default {
       menu: false,
       items: [
         {
-          title: 'Home',
-          href: '/'
-        },
-        {
           title: 'About',
           href: '/about'
         },
@@ -152,102 +145,3 @@ export default {
   },
 }
 </script>
-
-/*
-<nav class="flex items-center justify-between flex-wrap p-6">
-    <ul class="flex fixed top-0 inset-x-0 p-3">
-      <li class="flex-1 mr-2">
-        <nuxt-link class="btn block" to="/">Home</nuxt-link>
-      </li>
-      <li class="flex-1 mr-2">
-        <nuxt-link 
-          class="btn block" 
-          :to="{path: '/', hash: 'about'}"
-          v-scroll-to="{el: '#about'}">
-          About</nuxt-link>
-      </li>
-      <li class="flex-1 mr-2">
-        <nuxt-link 
-          class="btn block" 
-          :to="{path: '/', hash: 'tours'}" 
-          v-scroll-to="{el: '#tours'}">
-          Our Tours</nuxt-link>
-      </li>
-      <li class="flex-1 mr-2">
-        <nuxt-link class="btn block" to="/faqs">FAQs</nuxt-link>
-      </li>
-      <li class="flex-1 mr-2">
-        <nuxt-link class="btn block" to="/blog">Blog</nuxt-link>
-      </li>
-      <li class="flex-1 mr-2">
-        <nuxt-link 
-          class="btn block" 
-          :to="{hash: 'contact'}" 
-          v-scroll-to="{el: '#contact'}">
-          Contact</nuxt-link>
-      </li>
-      <li class="flex-1">
-        <nuxt-link class="btn block" to="/crew">Crew</nuxt-link>
-      </li>
-      <ContactButton />
-    </ul>
-  </nav>
-*/
-
-/*
-
- <div
-    class="text-fairwind-dark-blue bg-fairwind-light-blue"
-    :class="{ 'absolute w-full h-screen top-0 left-0': menu }"
-  >
-    <div class="sm:mx-auto flex flex-wrap bg-opacity-0">
-      <div class="w-auto p-6">
-        <!-- Title -->
-        <h1 class="sm:block font-logo text-2xl">Fairwind Charters</h1>
-        <!-- Icon -->
-        <div class="block sm:hidden">
-          <i class="fa fa-rocket"></i>
-        </div>
-      </div>
-      <!-- Desktop nav list -->
-      <nav class="hidden sm:block">
-        <ul class="flex">
-          <li
-            v-for="(item, index) in items"
-            :key="index"
-          >
-            <nuxt-link
-              :to="item.href"
-              class="hover:bg-green-500 p-6 block"
-            >
-              {{ item.title }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </nav>
-      <!-- Toggle menu mobile icon -->
-        <div
-          class="ml-auto sm:hidden p-6"
-          @click="menu = !menu"
-        >
-          <i class="fa fa-bars"></i>
-        </div>
-      </div>
-      <!-- Mobile nav list -->
-      <nav v-show="menu" class="w-full">
-        <ul class="flex flex-col text-center">
-        <li
-          v-for="(item, index) in items"
-          :key="index"
-        >
-          <a
-            :href="item.href"
-            class="hover:bg-green-500 p-6 block"
-          >
-            {{ item.title }}
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
- */

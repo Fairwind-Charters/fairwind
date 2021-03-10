@@ -56,12 +56,29 @@ module.exports = {
           900: '#280709'
         },
         'fairwind-dark-blue': '#001A31',
+        'fairwind-medium-blue': '#375194',
         'fairwind-light-blue': '#C8F0EE',
+        'menu-blue': '#003A70',
+        'fairwind-pink': {
+          100: '#FF34DF',
+          200: '#CC29B2',
+        },
       },
       opacity: {
         '10': '0.1',
         '20': '0.2'
-      }
+      },
+      rotate: {
+        '-180': '-180deg',
+         '-90': '-90deg',
+        '-45': '-45deg',
+         '0': '0',
+         '45': '45deg',
+         '90': '90deg',
+        '135': '135deg',
+         '180': '180deg',
+        '270': '270deg',
+       }
     },
     boxShadow: {
       ...defaultTheme.boxShadow,
@@ -69,7 +86,7 @@ module.exports = {
     }
   },
   variants: {
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
+    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'hover'],
     borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
     textColor: ['dark', 'dark-hover', 'dark-active']
   },
