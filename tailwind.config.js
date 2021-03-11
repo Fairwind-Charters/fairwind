@@ -26,9 +26,10 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Karla', ...defaultTheme.fontFamily.sans],
+        sans: ['Lato-Regular', ...defaultTheme.fontFamily.sans],
         mono: [...defaultTheme.fontFamily.mono],
-        logo: ['South Blue']
+        logo: ['South Blue'],
+        'page-title': ['Yeseva One'],
       },
       colors: {
         primary: {
@@ -70,15 +71,18 @@ module.exports = {
       },
       rotate: {
         '-180': '-180deg',
-         '-90': '-90deg',
+        '-90': '-90deg',
         '-45': '-45deg',
-         '0': '0',
-         '45': '45deg',
-         '90': '90deg',
+        '0': '0',
+        '45': '45deg',
+        '90': '90deg',
         '135': '135deg',
-         '180': '180deg',
+        '180': '180deg',
         '270': '270deg',
-       }
+       },
+       translate: {
+        '-y-20': '20rem',
+       },
     },
     boxShadow: {
       ...defaultTheme.boxShadow,

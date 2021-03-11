@@ -1,10 +1,22 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 
 @font-face {
   font-family: 'South Blue';
   font-style: normal;
   font-weight: normal;
   src: local('South Blue'), url(~assets/fonts/SouthBlue.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Lato-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lato-Regular'), url(~assets/fonts/Lato-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Yeseva One', cursive;
 }

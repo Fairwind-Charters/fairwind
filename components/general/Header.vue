@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <span class="font-logo text-fairwind-medium-blue text-2xl">Fairwind Charters</span>
+          <span class="font-logo text-fairwind-medium-blue text-2xl whitespace-nowrap">Fairwind Charters</span>
         </div>
         <div class="-mr-2 -my-2 md:hidden">
           <button
@@ -35,7 +35,7 @@
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <nuxt-link
             to="/contact"
-            class="ml-8 whitespace-nowrap inline-flex
+            class="ml-8 whitespace-nowrap inline-flex whitespace-nowrap
             items-center justify-center px-4 py-2 border
             border-transparent rounded-md shadow-sm text-base
             font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200">
