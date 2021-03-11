@@ -1,19 +1,21 @@
 <template>
-  <div class="container">
+  <div class="flex flex-col h-screen justify-between">
     <Header />
-    <ColorModePicker />
-    <nuxt />
+    <main class="py-6">
+      <nuxt />
+    </main>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '~/components/general/Header.vue'
-import ColorModePicker from '~/components/general/ColorModePicker.vue'
+import Footer from '~/components/general/Footer.vue'
 
 export default {
   components: {
     Header,
-    ColorModePicker
+    Footer,
   }
 }
 </script>

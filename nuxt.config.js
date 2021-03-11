@@ -16,6 +16,7 @@ const dynamicRoutes = getDynamicPaths(
 )
 
 export default {
+  target: 'static',
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
@@ -61,11 +62,16 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    {
+      src: '~/plugins/vue-video-background',
+      ssr: false
+    }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
+  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa', '@nuxtjs/fontawesome'],
   /*
    ** Nuxt.js modules
    */

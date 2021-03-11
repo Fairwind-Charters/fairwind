@@ -9,10 +9,27 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   theme: {
     darkSelector: '.dark-mode',
+    fontSize: {
+      'xs': '.75rem',
+      'sm': '.875rem',
+      'tiny': '.875rem',
+      'base': '1rem',
+      'lg': '1.125rem',
+      'xl': '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+      '7xl': '5rem',
+      '8xl': '6rem',
+    },
     extend: {
       fontFamily: {
-        sans: ['Karla', ...defaultTheme.fontFamily.sans],
-        mono: [...defaultTheme.fontFamily.mono]
+        sans: ['Lato-Regular', ...defaultTheme.fontFamily.sans],
+        mono: [...defaultTheme.fontFamily.mono],
+        logo: ['South Blue'],
+        'page-title': ['Yeseva One'],
       },
       colors: {
         primary: {
@@ -38,12 +55,34 @@ module.exports = {
           700: '#6E1D23',
           800: '#4D1015',
           900: '#280709'
-        }
+        },
+        'fairwind-dark-blue': '#001A31',
+        'fairwind-medium-blue': '#375194',
+        'fairwind-light-blue': '#C8F0EE',
+        'menu-blue': '#003A70',
+        'fairwind-pink': {
+          100: '#FF34DF',
+          200: '#CC29B2',
+        },
       },
       opacity: {
         '10': '0.1',
         '20': '0.2'
-      }
+      },
+      rotate: {
+        '-180': '-180deg',
+        '-90': '-90deg',
+        '-45': '-45deg',
+        '0': '0',
+        '45': '45deg',
+        '90': '90deg',
+        '135': '135deg',
+        '180': '180deg',
+        '270': '270deg',
+       },
+       translate: {
+        '-y-20': '20rem',
+       },
     },
     boxShadow: {
       ...defaultTheme.boxShadow,
@@ -51,7 +90,7 @@ module.exports = {
     }
   },
   variants: {
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
+    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'hover'],
     borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
     textColor: ['dark', 'dark-hover', 'dark-active']
   },
