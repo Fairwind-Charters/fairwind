@@ -1,7 +1,9 @@
 <template>
   <div class="flex flex-col h-screen justify-between">
     <Header />
-    <nuxt />
+    <main class="py-6">
+      <nuxt />
+    </main>
     <Footer />
   </div>
 </template>
