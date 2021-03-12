@@ -18,9 +18,11 @@
         </nuxt-link>
       </div>
     </video-background>
+    <Divider />
     <section id="tours" class="w-screen">
       <Tours />
     </section>
+    <Divider />
     <section id="instagram">
     </section>
     <section id="custom-tour">
@@ -36,10 +38,12 @@
 
 <script>
 import Tours from '~/components/general/Tours'
+import Divider from '~/components/general/Divider'
 export default {
   layout: 'home',
   components: {
     Tours,
+    Divider
   },
   data() {
     return {

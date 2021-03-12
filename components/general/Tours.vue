@@ -2,28 +2,28 @@
   <div class="flex">
     <div class="tours-container flex-grow">
       <div class="column1 column" :style="{ backgroundImage: `url(${backgroundUrl})` }">
-        <div class="h-full flex flex-col justify-center text-white text-3xl column-inner">
+        <div class="font-page-title h-full flex flex-col justify-center text-white text-3xl column-inner whitespace-no-wrap">
           <h3>Liberty</h3>
           <span>3 hours</span>
           <span>$899</span>
         </div>
       </div>
       <div class="column2 column" :style="{ backgroundImage: `url(${backgroundUrl2})` }">
-        <div class="h-full flex flex-col justify-center text-white text-3xl column-inner">
+        <div class="font-page-title h-full flex flex-col justify-center text-white text-3xl column-inner whitespace-no-wrap">
             <h3>Bridges</h3>
             <span>4hours</span>
             <span>$1199</span>
         </div>
       </div>
       <div class="column3 column" :style="{ backgroundImage: `url(${backgroundUrl3})` }">
-        <div class="h-full flex flex-col justify-center text-white text-3xl column-inner">
+        <div class="font-page-title h-full flex flex-col justify-center text-white text-3xl column-inner whitespace-no-wrap">
           <h3>Manhattan</h3>
           <span>5 hours</span>
           <span>$1499</span>
         </div>
       </div>
       <div class="column4 column" :style="{ backgroundImage: `url(${backgroundUrl4})` }">
-        <div class="h-full flex flex-col justify-center text-white text-3xl column-inner">
+        <div class="font-page-title h-full flex flex-col justify-center text-white text-3xl column-inner whitespace-no-wrap">
           <h3>Build your own</h3>
           <span>$299/hour</span>
           <span>3 hour min</span>
