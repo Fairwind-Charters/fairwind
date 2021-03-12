@@ -1,6 +1,6 @@
 <template>
-  <div class="w-screen" style="margin-top: -4rem;">
-    <svg width="100vw" viewBox="0 0 1440 170" xmlns="http://www.w3.org/2000/svg">
+  <div class="w-screen" style="margin-top: -4rem; height: 0px;display: flex;justify-content: center;align-items: center;width: 100%;flex-direction: row;">
+    <svg width="100vw" viewBox="0 0 1440 170" xmlns="http://www.w3.org/2000/svg" style="height: 30vh; position: relative; overflow: hidden;">
       <defs>
         <linearGradient y2="1.23426" x2="0.5" y1="-0.26522" x1="0.5" id="paint0_linear">
           <stop stop-color="white"/>
