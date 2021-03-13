@@ -13,13 +13,17 @@
                       </a>
                     </span>
                     <span class="font-bold text-white uppercase mb-2">Follow Us</span>
-                    <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500"><i class="fab fa-facebook-square"></i></a></span>
+                    <div class="social-media-links text-white text-4xl">
+                      <a href="#" target="_blank">
+                        <font-awesome-icon :icon="['fab', 'facebook']"/>
+                      </a>
+                      <a href="#" target="_blank">
+                        <font-awesome-icon :icon="['fab', 'instagram']"/>
+                      </a>
+                    </div>
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-bold text-white uppercase mt-4 md:mt-0 mb-2">Footer header 2</span>
-                    <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500">link 1</a></span>
-                    <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500">link 1</a></span>
-                    <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500">link 1</a></span>
+                  
                 </div>
             </div>
         </div>
@@ -45,7 +49,6 @@
 
 <script>
 export default {
-  name: 'Footer',
   computed: {
     content() {
       return this.$store.state.siteContent.contactus

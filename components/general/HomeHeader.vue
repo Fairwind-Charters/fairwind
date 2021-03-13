@@ -33,14 +33,14 @@
           </nuxt-link>
         </nav>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-          <nuxt-link
-            to="/contact"
-            class="ml-8 whitespace-nowrap inline-flex
-            items-center justify-center px-4 py-2 border
-            border-transparent rounded-md shadow-sm text-base
-            font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200">
-            Contact Us
-          </nuxt-link>
+          <div class="social-media-links text-fairwind-medium-blue text-4xl">
+            <a href="#" target="_blank">
+              <font-awesome-icon :icon="['fab', 'facebook']"/>
+            </a>
+            <a href="#" target="_blank" class="ml-1">
+              <font-awesome-icon :icon="['fab', 'instagram']"/>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -122,11 +122,11 @@ export default {
       items: [
         {
           title: 'About',
-          href: '/about'
+          href: { path: '/', hash:'#about'}
         },
         {
           title: 'Our Tours',
-          href: '/about'
+          href: { path: '/', hash:'#tours'}
         },
         {
           title: 'FAQs',
