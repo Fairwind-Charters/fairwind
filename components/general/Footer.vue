@@ -45,7 +45,6 @@
 
 <script>
 export default {
-  name: 'Footer',
   computed: {
     content() {
       return this.$store.state.siteContent.contactus

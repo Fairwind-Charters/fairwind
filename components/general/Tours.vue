@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex flex-col flex-col-reverse md:flex-row">
     <div class="tours-container flex-grow">
       <div class="column1 column" :style="{ backgroundImage: `url(${backgroundUrl})` }">
         <div class="font-page-title h-full flex flex-col justify-center text-white text-3xl column-inner whitespace-no-wrap">
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="mx-auto md:flex md:flex-col md:items-end row-start-1 md:row-auto">
+    <div class="mx-auto md:flex md:flex-col md:h-screen md:items-end row-start-1 md:row-auto">
       <h1 class="section-title font-page-title md:relative m-0 md:transform md:rotate-270 text-fairwind-medium-blue text-6xl whitespace-no-wrap">
         Our Tours
       </h1>
@@ -60,14 +60,14 @@ export default {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 98vh;
-  /* grid-gap: 1vw; */
-  /* margin: 0 auto; */
   max-width: 85vw;
+  @media (max-width: 768px) {
+    max-width: 100vw;
+    grid-template-columns: none;
+    grid-template-rows: 20vh;
+  }
 }
 .column {
-  /* display: grid;
-  grid-template-columns: repeat(3, 4vw);
-  grid-template-rows: repeat(10, 8vh); */
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,7 +95,7 @@ export default {
   @media (min-width: 768px) {
     font-size: 10vw;
     width: 10vw;
-    top: 4em;
+    top: 4.5em;
   }
 }
 </style>
