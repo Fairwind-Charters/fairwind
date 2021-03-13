@@ -20,6 +20,8 @@
     "vue-responsive-video-background-player": "^1.2.2"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@nuxtjs/color-mode": "^1.1.1",
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/pwa": "^3.3.2",

@@ -64,7 +64,8 @@ export default {
    */
   plugins: [
     {
-      src: '~/plugins/vue-video-background',
+      src: '~/plugins/vue-video-background.client.js',
+      mode: 'client',
       ssr: false
     }
   ],
@@ -101,6 +102,13 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  /** Font awesome config */
+  fontawesome: {
+    icons: {
+      // solid: ['faGithub'],
+      brands: true,
+    }
   },
   /*
    ** Custom additions configuration

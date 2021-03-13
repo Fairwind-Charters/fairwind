@@ -8,12 +8,12 @@
         <span>{{ content.quote }}</span>
         <span>- Dana Murphy, owner</span>
         <nuxt-link
-          to="/contact"
+          to="/crew"
           class="mt-4 whitespace-nowrap inline-flex whitespace-nowrap justify-center px-8 py-2 border text-xl
             border-transparent rounded-md shadow-sm
             font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200"
         >
-          Contact Us
+          Meet the crew!
         </nuxt-link>
       </div>
     </div>
