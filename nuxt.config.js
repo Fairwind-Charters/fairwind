@@ -58,7 +58,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/tailwind.css', '@/assets/css/main.pcss', '@/assets/css/fa.min.css'],
+  css: ['@/assets/css/tailwind.css', '@/assets/css/main.pcss', '@/node_modules/@fortawesome/fontawesome-svg-core/styles.css'],
   /*
    ** Plugins to load before mounting the App
    */
