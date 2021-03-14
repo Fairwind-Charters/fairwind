@@ -15,10 +15,10 @@
                     <span class="font-bold text-white uppercase mb-2">Follow Us</span>
                     <div class="social-media-links text-white text-4xl">
                       <a href="#" target="_blank">
-                        <font-awesome-icon :icon="['fab', 'facebook']"/>
+                        <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
                       </a>
                       <a href="#" target="_blank">
-                        <font-awesome-icon :icon="['fab', 'instagram']"/>
+                        <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' } "/>
                       </a>
                     </div>
                 </div>
