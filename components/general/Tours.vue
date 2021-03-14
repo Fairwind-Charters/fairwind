@@ -14,7 +14,7 @@
           <span class="z-10">{{ tour.length }}</span>
           <span class="z-10">{{ tour.cost }}</span>
           <div class="absolute tour-description text-sm md:text-xl font-sans w-6/12">
-            <div><span>{{ tour.description }}</span></div>
+            <div><span class="font-light">{{ tour.description }}</span></div>
             <nuxt-link
             to="/contact"
             class="mt-4 whitespace-nowrap inline-flex whitespace-nowrap
@@ -109,6 +109,6 @@ export default {
 }
 .column:hover .tour-description {
   opacity: 1;
-  transition: opacity 0.5s ease-in 0.5s;
+  transition: opacity 0.5s ease-in 1s;
 }
 </style>
