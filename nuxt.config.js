@@ -108,7 +108,8 @@ export default {
     icons: {
       // solid: ['faGithub'],
       brands: true,
-    }
+    },
+    addCss: true,
   },
   /*
    ** Custom additions configuration
