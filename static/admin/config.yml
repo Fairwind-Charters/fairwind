@@ -93,9 +93,9 @@ collections:
             collapsed: false
             widget: 'list'
             fields:
-              - { label: 'Image', name: 'tour image', widget: 'image', required: true, allow_multiple: false }
               - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Length', name: 'length', widget: 'number' }
+              - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
+              - { label: 'Length', name: 'length', widget: 'string' }
               - { label: 'Cost', name: 'cost', widget: 'string' }
               - { label: 'Description', name: 'description', widget: 'markdown' }
       - label: 'Build your own'

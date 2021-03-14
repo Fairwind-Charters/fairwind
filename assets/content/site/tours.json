@@ -1,3 +1,32 @@
 {
-  "list": []
+  "tours": [
+    {
+      "name": "Liberty",
+      "image": "/img/20200923_165737.jpg",
+      "length": "3 hours",
+      "cost": "$899",
+      "description": "Down the Hudson River to New York Harbor. We get as close as federal law allows to the Statue of Liberty, and you get a spectacular view of the NYC skyline"
+    },
+    {
+      "name": "Bridges",
+      "image": "/img/20200801_182650.jpg",
+      "length": "4 hours",
+      "cost": "$1199",
+      "description": "Liberty tour plus a pass under the Brooklyn and Manhattan bridges, and great views up the East River"
+    },
+    {
+      "name": "Manhatan",
+      "image": "/img/20200906_190243.jpg",
+      "length": "5 hours",
+      "cost": "$1499",
+      "description": "Get a glimpse of hidden New York as we make our way from the Hudson River, to the Harlem River, down the East River and around the Battery"
+    },
+    {
+      "name": "Build your own",
+      "image": "/img/20200830_170253.jpg",
+      "length": "3 hour/min",
+      "cost": "$299/hour",
+      "description": "Build your own experience. There's nothing we will say no to. Let us know what you have in mind!"
+    }
+  ]
 }
