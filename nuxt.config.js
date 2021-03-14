@@ -109,7 +109,6 @@ export default {
       // solid: ['faGithub'],
       brands: true,
     },
-    // addCss: true,
   },
   /*
    ** Custom additions configuration
