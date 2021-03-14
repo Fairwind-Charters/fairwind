@@ -109,7 +109,7 @@ export default {
       // solid: ['faGithub'],
       brands: true,
     },
-    addCss: false,
+    // addCss: true,
   },
   /*
    ** Custom additions configuration
@@ -121,7 +121,7 @@ export default {
   purgeCSS: {
     mode: 'postcss',
     whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main',],
-    whitelistPatterns: [/^article/, /image$/, /(^|\.)fa-/, /-fa($|\.)/]
+    whitelistPatterns: [/^article/, /image$/, /(^|\.)fa-/, /-fa($|\.)/, /(^|\.)svg-/]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
