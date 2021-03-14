@@ -58,7 +58,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/tailwind.css', '@/assets/css/main.pcss'],
+  css: ['@/assets/css/tailwind.css', '@/assets/css/main.pcss', '@fortawesome/fontawesome-svg-core/styles.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -109,7 +109,6 @@ export default {
       // solid: ['faGithub'],
       brands: true,
     },
-    addCss: true,
   },
   /*
    ** Custom additions configuration
