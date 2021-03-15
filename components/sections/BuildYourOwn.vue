@@ -9,12 +9,12 @@
     <DividerBottom />
     <div class="w-full experiences-grid">
       <div class="flex">
-        <div v-for="(option, index) in content.optionslist" :key="index" class="experience-el flex-grow bg-cover flex items-end justify-end" :style="{ backgroundImage: `url(${option.image})` }">
+        <div v-for="(option, index) in content.optionslist" :key="index" class="experience-el flex-grow bg-cover bg-top flex items-end justify-end" :style="{ backgroundImage: `url(${option.image})` }">
           <p class="experience-el-text text-white text-3xl font-bold transform rotate-270 whitespace-nowrap text-shadow-md mb-6">{{ option.title }}</p>
         </div>
       </div>
-      <div class="w-full bg-fairwind-medium-blue flex items-center">
-        <div class="container mx-auto lg:text-2xl">
+      <div class="w-full bg-fairwind-medium-blue flex items-center pt-8 pb-12">
+        <div class="container mx-auto px-2 lg:text-2xl">
           <p class="text-fairwind-light-blue font-light">Make your special event a trip to remember.</p>
           <p class="text-fairwind-light-blue font-light">Let us know what you have in mind!</p>
           <nuxt-link
@@ -25,6 +25,11 @@
               font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200"
             >
             Contact Us
+          </nuxt-link>
+          <nuxt-link
+            to="/faqs"
+            class="text-fairwind-light-blue mt-2 underline block">
+            Learn more
           </nuxt-link>
         </div>
       </div>

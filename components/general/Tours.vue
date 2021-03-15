@@ -13,7 +13,7 @@
           <h3 class="z-10 text-shadow-md">{{ tour.name }}</h3>
           <span class="z-10 text-shadow-md">{{ tour.length }}</span>
           <span class="z-10 text-shadow-md">{{ tour.cost }}</span>
-          <div class="absolute tour-description text-sm md:text-xl font-sans w-6/12">
+          <div class="absolute tour-description text-sm md:text-xl font-sans md:w-6/12">
             <div class="bg-fairwind-medium-blue bg-opacity-75 p-4 rounded">
               <div class="tour-description-text">
                 <span class="font-light">{{ tour.description }}</span>
@@ -112,6 +112,9 @@ export default {
     top: 45%;
     left: 27%;
     padding-bottom: 30vh;
+  }
+  @media (max-width: 768px) {
+    left: 0%;
   }
 }
 .column:hover .tour-description {
