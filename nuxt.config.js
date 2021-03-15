@@ -67,6 +67,11 @@ export default {
       src: '~/plugins/vue-video-background.client.js',
       mode: 'client',
       ssr: false
+    },
+    {
+      src: '~/plugins/vue-picture-swipe.client.js',
+      mode: 'client',
+      ssr: false
     }
   ],
   /*

@@ -136,7 +136,9 @@ collections:
             widget: 'list'
             required: true
             summary: '{{ fields.image }}'
-            field: { label: 'Image', name: 'image', widget: 'image' }
+            fields:
+              - { label: 'Image name', name: 'alt', widget: 'string' }
+              - { label: 'Image', name: 'src', widget: 'image' }
       - label: 'Testimonials'
         name: 'testimonials'
         file: 'assets/content/site/testimonials.json'
