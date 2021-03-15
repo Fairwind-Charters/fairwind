@@ -59,7 +59,8 @@
     </section>
     <DividerTop />
     <div class="w-screen flex jusify-center align-center p-12 bg-fairwind-light-blue"></div>
-    <DividerBottom />    <section id="flagship">
+    <DividerBottom />
+    <section id="flagship" class="w-screen">
       <OurFlagship />
     </section>
     <section id="testimonials">
@@ -70,7 +71,7 @@
 <script>
 import Tours from '~/components/general/Tours'
 import AboutUs from '~/components/general/AboutUs'
-import OurFlagship from '~/components/general/OurFlagship'
+import OurFlagship from '~/components/sections/OurFlagship'
 import BuildYourOwn from '~/components/sections/BuildYourOwn'
 import DividerTop from '~/components/general/DividerTop'
 import DividerBottom from '~/components/general/DividerBottom'
