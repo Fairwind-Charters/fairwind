@@ -1,13 +1,21 @@
 <template>
-  <div>
-    <div class="copy-and-gallery bg-fairwind-medium-blue py-24 px-4">
-      <div class="copy container mx-auto">
-        <p class="text-left text-white font-light">"{{ content.body }}</p>
-        <div class="boat-gallery-wrapper py-4">
-          <client-only>
-            <vue-picture-swipe :items="images" />
-          </client-only>
-        </div>
+  <div class="copy-and-gallery bg-fairwind-medium-blue pb-24">
+    <div class="video-container v-full bg-cover text-white" :style="{ backgroundImage: `url(${videoThumbnail})` }">
+      <div class="p-32">
+        <a :href="content.videourl" target="_blank" class="text-6xl">
+          <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'youtube' } "/>
+        </a>
+      </div>
+      <div class="container mx-auto flex justify-end">
+        <h2 class="font-page-title text-6xl px-4">Our Flagship</h2>
+      </div>
+    </div>
+    <div class="copy container mx-auto px-4">
+      <p class="text-left text-white font-light py-8">"{{ content.body }}</p>
+      <div class="boat-gallery-wrapper py-4">
+        <client-only>
+          <vue-picture-swipe :items="images" />
+        </client-only>
       </div>
     </div>
   </div>
@@ -32,6 +40,11 @@ export default {
         h: 900,
         alt: img.alt
       }));
+    },
+    videoThumbnail() {
+      const { videourl } = this.$store.state.siteContent.flagship;
+      const id = videourl.split('watch?v=').pop();
+      return `https://img.youtube.com/vi/${id}/hqdefault.jpg`
     }
   },
 }

@@ -1,4 +1,25 @@
 {
-  "title": "",
-  "list": []
+  "title": "Happy Customers",
+  "list": [
+    {
+      "customername": "Niki, Cat and Steve",
+      "quote": "It was wonderful. Joel made sure our boat ride was memorable. We had a boatload of fun",
+      "image": "/img/20200714_150551.jpg"
+    },
+    {
+      "customername": "Jennifer, Tammy and Dona",
+      "quote": "Imagine you are having fun. Now imagine you are on a boat. DOUBLE THE FUN!",
+      "image": "/img/20200725_183313.jpg"
+    },
+    {
+      "customername": "Monica, Chandler, Rachel, Joey",
+      "quote": "Going up the river and seeing all the nature from the river was a beautiful way to escape the city”",
+      "image": "/img/20201024_121726.jpg"
+    },
+    {
+      "customername": "Monica, Chandler, Rachel, Joey",
+      "quote": "Going up the river and seeing all the nature from the river was a beautiful way to escape the city”",
+      "image": "/img/20201024_121726.jpg"
+    }
+  ]
 }
