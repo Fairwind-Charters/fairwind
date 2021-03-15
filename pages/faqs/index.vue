@@ -6,6 +6,7 @@
           <font-awesome-icon :icon="['fas', 'search']"/>
         </span>
         <input v-model="text" @input="filterFaqs" type="text" placeholder="Search..." class="px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pl-10"/>
+        <p v-show="showSearchError" class="mt-4 font-light text-lg md:text-2xl">Your search had no results</p>
       </div>
       <div v-for="(faq, index) in faqs" :key="index" class="text-lg md:text-2xl">
         <p class="font-light mb-1">{{ faq.question }}</p>
@@ -32,12 +33,15 @@ export default {
         const match = (faq.answer.includes(text) || faq.question.includes(text));
         return match;
       });
+      if (this.faqs.length === 0) this.showSearchError = true;
+      if (this.faqs.length > 0) this.showSearchError = false;
     }
   },
   data() {
     return {
       text: '',
       faqs: this.$store.state.siteContent.faqs.list,
+      showSearchError: false,
     }
   }
 }
