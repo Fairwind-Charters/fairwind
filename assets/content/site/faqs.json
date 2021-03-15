@@ -1,3 +1,28 @@
 {
-  "list": []
+  "list": [
+    {
+      "question": "What is your base rate?",
+      "answer": "Our base rate is $299/hour with a 2 hour minimum."
+    },
+    {
+      "question": "How many people does your boat fit?",
+      "answer": "5 people"
+    },
+    {
+      "question": "Can I bring my own food/drinks?",
+      "answer": "Yes, our boat is byob"
+    },
+    {
+      "question": "Do you offer trips year-round?",
+      "answer": "No"
+    },
+    {
+      "question": "Is your boat wheelchair accessible?",
+      "answer": "We can make it happen"
+    },
+    {
+      "question": "Can I rent the boat for a business party?",
+      "answer": "Yes"
+    }
+  ]
 }

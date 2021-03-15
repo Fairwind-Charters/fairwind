@@ -46,8 +46,7 @@
     <DividerTop />
     <div class="w-screen flex jusify-center align-center p-12 bg-fairwind-light-blue"></div>
     <DividerBottom />
-    <section id="instagram">
-    </section>
+    <section id="instagram"></section>
     <section id="custom-tour" class="w-screen">
       <BuildYourOwn />
     </section>
@@ -63,8 +62,11 @@
     <section id="flagship" class="w-screen">
       <OurFlagship />
     </section>
-    <section id="testimonials">
+    <DividerTop />
+    <section id="testimonials" class="w-screen">
+      <Testimonials />
     </section>
+    <DividerBottom />
   </main>
 </template>
 
@@ -73,6 +75,7 @@ import Tours from '~/components/general/Tours'
 import AboutUs from '~/components/general/AboutUs'
 import OurFlagship from '~/components/sections/OurFlagship'
 import BuildYourOwn from '~/components/sections/BuildYourOwn'
+import Testimonials from '~/components/sections/Testimonials'
 import DividerTop from '~/components/general/DividerTop'
 import DividerBottom from '~/components/general/DividerBottom'
 export default {
@@ -82,6 +85,7 @@ export default {
     AboutUs,
     OurFlagship,
     BuildYourOwn,
+    Testimonials,
     DividerTop,
     DividerBottom
   },

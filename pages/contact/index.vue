@@ -1,0 +1,88 @@
+<template>
+  <div class="page-content grid md:grid-flow-col grid-flow-row">
+    <div class="contact-content-wrapper mx-auto px-6">
+      <form class="w-full md:p-6">
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+              First Name
+            </label>
+            <input v-model="name" :class="[ nameError ? 'border-red-500' : 'border-gray-200' ]" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+            <p :class="[ nameError ? 'block' : 'hidden' ]" class="text-red-500 text-xs italic hidden">Please fill out this field.</p>
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+              Last Name
+            </label>
+            <input v-model="lastname" :class="[ lastnameError ? 'border-red-500' : 'border-gray-200' ]"  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+            <p :class="[ lastnameError ? 'block' : 'hidden' ]" class="text-red-500 text-xs italic hidden">Please fill out this field.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+              E-mail
+            </label>
+            <input v-model="email" :class="[ emailError ? 'border-red-500' : 'border-gray-200' ]"  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email">
+            <p :class="[ emailError ? 'block' : 'hidden' ]" class="text-red-500 text-xs italic">Please fill out this field</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+              Message
+            </label>
+            <textarea v-model="msg" :class="[ msgError ? 'border-red-500' : 'border-gray-200' ]"  class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
+            <p :class="[ msgError ? 'block' : 'hidden' ]" class="text-red-500 text-xs italic">Please fill out this field</p>
+          </div>
+        </div>
+        <div class="md:flex md:items-center">
+          <div class="md:w-1/3">
+            <button @click="validate" class="shadow bg-fairwind-pink-100 hover:bg-fairwind-pink-200 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+              Send
+            </button>
+          </div>
+          <div class="md:w-2/3"></div>
+        </div>
+      </form>
+    </div>
+    <div class="mx-auto md:flex md:flex-col md:items-end md:h-screen md:w-full md:sticky inset-y-0 row-start-1 md:row-auto">
+      <h1 class="section-title font-page-title md:relative m-0 md:transform md:rotate-270 text-fairwind-medium-blue text-6xl whitespace-no-wrap">Contact Us</h1>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  computed: {
+    content() {
+      return this.$store.state.siteContent.faqs
+    }
+  },
+  data() {
+    return {
+      name: '',
+      lastname: '',
+      email: '',
+      msg: '',
+      nameError: false,
+      lastnameError: false,
+      emailError: false,
+      msgError: false,
+    }
+  }
+}
+</script>
+
+<style lang="postcss" scoped>
+.section-title {
+  @media (min-width: 768px) {
+    font-size: 10vw;
+    width: 10vw;
+    top: 4.25em;
+  }
+}
+.contact-content-wrapper {
+  width: 90vw;
+}
+</style>
