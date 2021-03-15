@@ -67,6 +67,11 @@ export default {
       src: '~/plugins/vue-video-background.client.js',
       mode: 'client',
       ssr: false
+    },
+    {
+      src: '~/plugins/vue-picture-swipe.client.js',
+      mode: 'client',
+      ssr: false
     }
   ],
   /*
@@ -109,7 +114,6 @@ export default {
       // solid: ['faGithub'],
       brands: true,
     },
-    // addCss: true,
   },
   /*
    ** Custom additions configuration

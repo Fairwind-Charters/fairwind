@@ -1,5 +1,30 @@
 {
   "videourl": "",
-  "body": "",
-  "gallery": []
+  "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, ante sed hendrerit blandit, est magna malesuada nunc, nec interdum nulla nulla quis nulla. Phasellus id ultrices quam, nec porttitor mi. Quisque efficitur fringilla sagittis. Quisque a mi eu ipsum commodo commodo sit amet sed libero. Quisque quis magna sit amet enim pellentesque varius. Duis sodales tellus est, in varius ipsum ultrices id. Phasellus accumsan sodales eros et malesuada. Vestibulum id enim scelerisque, interdum tellus id, congue massa. Ut ut nunc ac quam consequat elementum at ut est. Maecenas ut dui aliquet, sagittis purus ut, ultricies massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt turpis sit amet consectetur facilisis.",
+  "images": [
+    {
+      "alt": "Boat gallery picture",
+      "src": "/img/0c4e014fd33b4f0663fbac467960b665.jpg"
+    },
+    {
+      "alt": "Boat gallery picture",
+      "src": "/img/9d2d3c31701324a3daedbffc070d7544.jpg"
+    },
+    {
+      "alt": "Boat gallery picture",
+      "src": "/img/9036abf0c6468a92748ad680f257204a.jpg"
+    },
+    {
+      "alt": "Boat gallery picture",
+      "src": "/img/20200808_191758.jpg"
+    },
+    {
+      "alt": "Boat gallery picture",
+      "src": "/img/20200923_162953.jpg"
+    },
+    {
+      "alt": "Boat gallery picture",
+      "src": "/img/IMG_5388.jpeg"
+    }
+  ]
 }
