@@ -151,9 +151,9 @@ collections:
             name: 'testimonialslist'
             widget: 'list'
             fields:
-              - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
-              - { label: 'Quote', name: 'quote', widget: 'string' }
               - { label: 'Customer Name', name: 'customername', widget: 'string' }
+              - { label: 'Quote', name: 'quote', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
 
       - label: 'Contact Us'
         name: 'contactus'
@@ -175,7 +175,7 @@ collections:
           preview: false
         fields:
           - label: 'Frequent Asked Questions'
-            name: 'faqslist'
+            name: 'list'
             widget: 'list'
             fields:
               - { label: 'Question', name: 'question', widget: 'string' }

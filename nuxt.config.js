@@ -111,7 +111,7 @@ export default {
   /** Font awesome config */
   fontawesome: {
     icons: {
-      // solid: ['faGithub'],
+      solid: true,
       brands: true,
     },
   },
