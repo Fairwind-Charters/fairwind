@@ -1,5 +1,18 @@
 {
-  "heroimage": "",
-  "optionslist": [],
-  "sidetext": ""
+  "heroimage": "/img/IMG_9751.jpeg",
+  "optionslist": [
+    {
+    "title": "Parties",
+    "image": "/img/20200725_194750.jpg"
+    },
+    {
+      "title": "Weddings",
+      "image": "/img/IMG_9681.jpeg"
+    },
+    {
+      "title": "Music videos",
+      "image": "/img/20200830_170253.jpg"
+    }
+  ],
+  "sidetext": "Make your special event a trip to remember! Let us know what you have in mind"
 }

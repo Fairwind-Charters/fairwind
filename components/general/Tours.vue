@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col flex-col-reverse md:flex-row">
     <div class="tours-container flex-grow">
-      <div class="mobile-title block md:hidden">
+      <div class="mobile-title z-20">
         <div class="mx-auto flex h-full justify-center items-center">
           <h1 class="section-title font-page-title m-0 text-fairwind-medium-blue text-6xl whitespace-no-wrap">
             Our Tours
@@ -10,25 +10,29 @@
       </div>
       <div v-for="(tour, index) in tours" :key="index" class="column" :style="{ backgroundImage: `url(${tour.image})` }">
         <div class="font-page-title h-full flex flex-col justify-center text-white text-xl md:text-3xl column-inner whitespace-no-wrap">
-          <h3 class="z-10">{{ tour.name }}</h3>
-          <span class="z-10">{{ tour.length }}</span>
-          <span class="z-10">{{ tour.cost }}</span>
+          <h3 class="z-10 text-shadow-md">{{ tour.name }}</h3>
+          <span class="z-10 text-shadow-md">{{ tour.length }}</span>
+          <span class="z-10 text-shadow-md">{{ tour.cost }}</span>
           <div class="absolute tour-description text-sm md:text-xl font-sans w-6/12">
-            <div><span class="font-light">{{ tour.description }}</span></div>
-            <nuxt-link
-            to="/contact"
-            class="mt-4 whitespace-nowrap inline-flex whitespace-nowrap
-              items-center justify-center px-8 py-2 border text-xl
-              border-transparent rounded-md shadow-sm
-              font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200"
-            >
-              Contact Us
-            </nuxt-link>
+            <div class="bg-fairwind-medium-blue bg-opacity-75 p-4 rounded">
+              <div class="tour-description-text">
+                <span class="font-light">{{ tour.description }}</span>
+              </div>
+              <nuxt-link
+              to="/contact"
+              class="mt-4 whitespace-nowrap inline-flex whitespace-nowrap
+                items-center justify-center px-8 py-2 border text-xl
+                border-transparent rounded-md shadow-sm
+                font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200"
+              >
+                Contact Us
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="mx-auto hidden md:flex md:flex-col md:h-screen md:items-end row-start-1 md:row-auto">
+    <div class="desktop-title mx-auto md:flex-col md:items-end row-start-1 md:row-auto">
       <h1 class="section-title font-page-title md:relative m-0 md:transform md:rotate-270 text-fairwind-medium-blue text-6xl whitespace-no-wrap">
         Our Tours
       </h1>
@@ -78,7 +82,10 @@ export default {
   left: 0;
   background-image: linear-gradient(to bottom right,#002f4b,#002f4b);
   opacity: .3; 
-}  
+}
+.column:hover:before {
+  opacity: 0; 
+}
 .column:hover {
   padding-right: 30vw;
   @media (max-width: 1190px) {
@@ -93,7 +100,7 @@ export default {
   @media (min-width: 768px) {
     font-size: 10vw;
     width: 10vw;
-    top: 4.5em;
+    top: 4em;
   }
 }
 .tour-description {
@@ -110,5 +117,17 @@ export default {
 .column:hover .tour-description {
   opacity: 1;
   transition: opacity 0.5s ease-in 1s;
+}
+.mobile-title {
+  display: none;
+  @media (max-width: 1190px) {
+    display: block;
+  }
+}
+.desktop-title {
+  display: none;
+  @media (min-width: 1190px) {
+    display: flex;
+  }
 }
 </style>
