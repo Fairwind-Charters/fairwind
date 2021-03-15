@@ -190,7 +190,7 @@ collections:
         fields:
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - label: 'Crew Members'
-            name: 'crewmembers'
+            name: 'members'
             widget: 'list'
             fields:
               - { label: 'Name', name: 'name', widget: 'string' }

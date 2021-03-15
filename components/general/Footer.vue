@@ -1,32 +1,32 @@
 <template>
   <footer class="footer bg-fairwind-dark-blue pt-1">
     <div class="container mx-auto px-6">
-        <div class="sm:flex sm:mt-8">
-            <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
-                <div class="flex flex-col">
-                    <span class="font-bold text-white uppercase mb-2">Phone</span>
-                    <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500">{{ content.phone }}</a></span>
-                    <span class="font-bold text-white uppercase mb-2">E-mail</span>
-                    <span class="my-2">
-                      <a :href="`mailto:${content.email}`" class="text-white text-md hover:text-blue-500">
-                        {{ content.email }}
-                      </a>
-                    </span>
-                    <span class="font-bold text-white uppercase mb-2">Follow Us</span>
-                    <div class="social-media-links text-white text-4xl">
-                      <a href="#" target="_blank">
-                        <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
-                      </a>
-                      <a href="#" target="_blank">
-                        <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' } "/>
-                      </a>
-                    </div>
-                </div>
-                <div class="flex flex-col">
-                  
-                </div>
+      <div class="sm:flex sm:mt-8">
+        <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
+          <div class="flex flex-col">
+            <span class="font-bold text-white uppercase">Phone</span>
+            <span class="my-2"><a href="#" class="text-white text-md hover:text-blue-500">{{ content.phone }}</a></span>
+            <span class="font-bold text-white uppercase">E-mail</span>
+            <span class="my-2">
+              <a :href="`mailto:${content.email}`" class="text-white text-md hover:text-blue-500">
+                {{ content.email }}
+              </a>
+            </span>
+            <span class="font-bold text-white uppercase">Follow Us</span>
+            <div class="social-media-links text-white text-4xl">
+              <a href="#" target="_blank">
+                <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
+              </a>
+              <a href="#" target="_blank">
+                <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' } "/>
+              </a>
             </div>
+          </div>
+          <div class="flex flex-col">
+            
+          </div>
         </div>
+      </div>
     </div>
     <div class="container mx-auto px-6">
         <div class="mt-16 flex flex-row items-center">

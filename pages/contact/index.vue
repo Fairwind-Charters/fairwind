@@ -1,6 +1,25 @@
 <template>
   <div class="page-content grid md:grid-flow-col grid-flow-row">
     <div class="contact-content-wrapper mx-auto px-6">
+      <div class="flex flex-col text-gray-800 md:p-6">
+        <span class="font-bold uppercase">Phone</span>
+        <span class="my-2"><a href="#" class="text-md hover:text-blue-500">{{ contact.phone }}</a></span>
+        <span class="font-bold uppercase">E-mail</span>
+        <span class="my-2">
+          <a :href="`mailto:${content.email}`" class="text-md hover:text-blue-500">
+            {{ contact.email }}
+          </a>
+        </span>
+        <span class="font-bold uppercase">Follow Us</span>
+        <div class="social-media-links text-4xl">
+          <a href="#" target="_blank">
+            <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
+          </a>
+          <a href="#" target="_blank">
+            <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' } "/>
+          </a>
+        </div>
+      </div>
       <form class="w-full md:p-6">
         <div class="flex flex-wrap -mx-3 mb-6">
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -57,6 +76,9 @@ export default {
   computed: {
     content() {
       return this.$store.state.siteContent.faqs
+    },
+    contact() {
+      return this.$store.state.siteContent.contactus
     }
   },
   data() {

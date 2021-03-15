@@ -1,12 +1,41 @@
 {
-  "body": "This is our crew",
-  "list": [],
-  "crewmembers": [
+  "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, ante sed hendrerit blandit, est magna malesuada nunc, nec interdum nulla nulla quis nulla. Phasellus id ultrices quam, nec porttitor mi. Quisque efficitur fringilla sagittis. Quisque a mi eu ipsum commodo commodo sit amet sed libero. Quisque quis magna sit amet enim pellentesque varius. Duis sodales tellus est, in varius ipsum ultrices id. Phasellus accumsan sodales eros et malesuada. Quisque quis magna sit amet enim pellentesque varius. Phasellus id ultrices quam, nec porttitor mi.",
+  "members": [
     {
-      "name": "Ellen Ripley",
-      "role": "Lieutenant",
-      "image": "/img/placeholder-320x180.png",
-      "blurb": "lorem ipsum dolor sit amet"
+      "name": "John",
+      "role": "Captain",
+      "image": "/img/IMG_9681.jpeg",
+      "blurb": ""
+    },
+    {
+      "name": "Jim",
+      "role": "Captain",
+      "image": "/img/IMG_9681.jpeg",
+      "blurb": ""
+    },
+    {
+      "name": "James",
+      "role": "Captain",
+      "image": "/img/IMG_9681.jpeg",
+      "blurb": ""
+    },
+    {
+      "name": "Jonathan",
+      "role": "Captain",
+      "image": "/img/IMG_9681.jpeg",
+      "blurb": ""
+    },
+    {
+      "name": "Jameel",
+      "role": "Captain",
+      "image": "/img/IMG_9681.jpeg",
+      "blurb": ""
+    },
+    {
+      "name": "Julian",
+      "role": "Captain",
+      "image": "/img/IMG_9681.jpeg",
+      "blurb": ""
     }
   ]
 }
