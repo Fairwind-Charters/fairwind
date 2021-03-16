@@ -139,8 +139,8 @@ export default {
   },
   pwa: {
     icon: {
-      source: 'static/icon.png',
-      filename: 'icon.png'
+      source: 'static/fairwind-icon.png',
+      filename: 'fairwind-icon.png'
     },
     manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang },
     meta: {
