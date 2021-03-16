@@ -3,19 +3,19 @@
     <div class="contact-content-wrapper mx-auto px-6">
       <div class="flex flex-col text-gray-800 md:p-6">
         <span class="font-bold uppercase">Phone</span>
-        <span class="my-2"><a href="#" class="text-md hover:text-blue-500">{{ contact.phone }}</a></span>
+        <span class="my-2"><a :href="`tel:${contact.phone}`" class="text-md hover:text-blue-500">{{ contact.phone }}</a></span>
         <span class="font-bold uppercase">E-mail</span>
         <span class="my-2">
-          <a :href="`mailto:${content.email}`" class="text-md hover:text-blue-500">
+          <a :href="`mailto:${contact.email}`" class="text-md hover:text-blue-500">
             {{ contact.email }}
           </a>
         </span>
         <span class="font-bold uppercase">Follow Us</span>
         <div class="social-media-links text-4xl">
-          <a href="#" target="_blank">
+          <a :href="contact.facebook" target="_blank">
             <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
           </a>
-          <a href="#" target="_blank">
+          <a :href="contact.instagram" target="_blank">
             <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' } "/>
           </a>
         </div>

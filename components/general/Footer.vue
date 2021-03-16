@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer bg-fairwind-dark-blue pt-1">
+  <footer class="footer bg-fairwind-dark-blue pt-12">
     <div class="container mx-auto px-6">
       <div class="sm:flex sm:mt-8">
         <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
@@ -14,10 +14,10 @@
             </span>
             <span class="font-bold text-white uppercase">Follow Us</span>
             <div class="social-media-links text-white text-4xl">
-              <a href="#" target="_blank">
+              <a :href="content.facebook" target="_blank">
                 <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
               </a>
-              <a href="#" target="_blank">
+              <a :href="content.instagram" target="_blank">
                 <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' } "/>
               </a>
             </div>

@@ -34,19 +34,20 @@
         </nav>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <div class="social-media-links text-fairwind-medium-blue text-4xl">
-            <a href="#" target="_blank">
+            <a :href="contact.facebook" target="_blank">
               <font-awesome-icon :icon="['fab', 'facebook']"/>
             </a>
-            <a href="#" target="_blank" class="ml-1">
+            <a :href="contact.instagram" target="_blank" class="ml-1">
               <font-awesome-icon :icon="['fab', 'instagram']"/>
             </a>
           </div>
           <nuxt-link
             to="/contact"
             class="ml-8 whitespace-nowrap inline-flex whitespace-nowrap
-            items-center justify-center px-4 py-2 border
-            border-transparent rounded-md shadow-sm text-base
-            font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200">
+              items-center justify-center px-4 py-2 border
+              border-transparent rounded-md shadow-sm text-base
+              font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200"
+          >
             Contact Us
           </nuxt-link>
         </div>
@@ -148,14 +149,19 @@ export default {
           href: '/faqs'
         },
         {
-          title: 'News',
-          href: '/news'
+          title: 'Blog',
+          href: '/blog'
         },
         {
           title: 'Crew',
           href: '/crew'
         }
       ]
+    }
+  },
+  computed: {
+    contact() {
+      return this.$store.state.siteContent.contactus
     }
   },
 }
