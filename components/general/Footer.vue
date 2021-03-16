@@ -1,4 +1,6 @@
 <template>
+<div>
+  <DividerTop class="bg-fairwind-dark-blue" />
   <footer class="footer bg-fairwind-dark-blue pt-12">
     <div class="container mx-auto px-6">
       <div class="sm:flex sm:mt-8">
@@ -22,8 +24,15 @@
               </a>
             </div>
           </div>
-          <div class="flex flex-col">
-            
+          <div class="flex flex-col md:flex-row p-4">
+            <div class="font-light text-white text-xs p-4 flex flex-col align-center">
+              <p class="mt-3 text-center md:text-left">Edgewater Marina</p>
+              <p class="mt-2 text-center md:text-left">989 River Rd</p>
+              <p class="mt-2 text-center md:text-left">Edgewater NJ, 07020</p>
+            </div>
+            <div class="w-full md:w-1/2">
+              <iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Fairwind%20Charters%20Edgewater%20Marina+(Fairwind%20Charters)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -45,10 +54,15 @@
         </div>
     </div>
   </footer>
+</div>
 </template>
 
 <script>
+import DividerTop from '~/components/general/DividerTop'
 export default {
+  components: {
+    DividerTop
+  },
   computed: {
     content() {
       return this.$store.state.siteContent.contactus

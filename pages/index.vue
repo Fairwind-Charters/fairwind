@@ -35,7 +35,7 @@
         </div>
       </template>
     </client-only>
-    <DividerTop />
+    <DividerTop class="bg-fairwind-light-blue" />
     <div class="w-screen flex justify-center align-center p-16 md:py-12 bg-fairwind-light-blue">
       <p class="container mx-auto text-fairwind-medium-blue font-light text-lg">We provide private yacht charters at an affordable price in the New York/New Jersey area. Our goal is to get you out on the water and having fun while maintaining the highest standards of safety and service. Please contact us and we will be happy to answer any questions. Everything is more fun on a boat!</p>
     </div>
@@ -43,26 +43,26 @@
     <section id="tours" class="w-screen">
       <Tours />
     </section>
-    <DividerTop />
+    <DividerTop class="bg-fairwind-light-blue" />
     <div class="w-screen flex jusify-center align-center p-12 bg-fairwind-light-blue"></div>
     <DividerBottom />
     <section id="instagram"></section>
     <section id="custom-tour" class="w-screen">
       <BuildYourOwn />
     </section>
-    <DividerTop />
+    <DividerTop class="bg-fairwind-light-blue" />
     <div class="w-screen flex jusify-center align-center p-12 bg-fairwind-light-blue"></div>
     <DividerBottom />
     <section id="about" class="w-screen">
       <AboutUs />
     </section>
-    <DividerTop />
+    <DividerTop class="bg-fairwind-light-blue" />
     <div class="w-screen flex jusify-center align-center p-12 bg-fairwind-light-blue"></div>
     <DividerBottom />
     <section id="flagship" class="w-screen">
       <OurFlagship />
     </section>
-    <DividerTop />
+    <DividerTop class="bg-fairwind-light-blue" />
     <section id="testimonials" class="w-screen">
       <Testimonials />
     </section>
