@@ -16,7 +16,6 @@
             @click="menu = true"
           >
             <span class="sr-only">Open menu</span>
-            <!-- Heroicon name: outline/menu -->
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -34,10 +33,10 @@
         </nav>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <div class="social-media-links text-fairwind-medium-blue text-4xl">
-            <a href="#" target="_blank">
+            <a :href="contact.facebook" target="_blank">
               <font-awesome-icon :icon="['fab', 'facebook']"/>
             </a>
-            <a href="#" target="_blank" class="ml-1">
+            <a :href="contact.instagram" target="_blank" class="ml-1">
               <font-awesome-icon :icon="['fab', 'instagram']"/>
             </a>
           </div>
@@ -45,16 +44,6 @@
       </div>
     </div>
 
-    <!--
-      Mobile menu, show/hide based on mobile menu state.
-
-      Entering: "duration-200 ease-out"
-        From: "opacity-0 scale-95"
-        To: "opacity-100 scale-100"
-      Leaving: "duration-100 ease-in"
-        From: "opacity-100 scale-100"
-        To: "opacity-0 scale-95"
-    -->
     <div 
       v-show="menu"
       class="absolute top-0 inset-x-0 p-2 z-10 transition transform origin-top-right md:hidden">
@@ -104,6 +93,18 @@
             >
               Contact Us
             </nuxt-link>
+            <div class="flex items-center justify-end">
+              <div class="social-media-links text-fairwind-medium-blue text-lg w-full flex p-2">
+                <div class="w-full text-5xl flex justify-end">
+                  <a :href="contact.facebook" target="_blank">
+                    <font-awesome-icon :icon="['fab', 'facebook']"/>
+                  </a>
+                  <a :href="contact.instagram" target="_blank" class="ml-4">
+                    <font-awesome-icon :icon="['fab', 'instagram']"/>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -133,14 +134,19 @@ export default {
           href: '/faqs'
         },
         {
-          title: 'News',
-          href: '/news'
+          title: 'Blog',
+          href: '/blog'
         },
         {
           title: 'Crew',
           href: '/crew'
         }
       ]
+    }
+  },
+  computed: {
+    contact() {
+      return this.$store.state.siteContent.contactus
     }
   },
 }

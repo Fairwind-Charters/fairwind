@@ -5,9 +5,9 @@
         :src="require(`~/static/video/hero_video.mp4`)"
         class="h-screen"
       >
-        <div class="h-screen flex flex-col justify-center items-center bg-black bg-opacity-20" style="background: linear-gradient(45deg,#2a4ae430,#fb949e6b);">
-          <h1 class="title font-logo md:text-9xl sm:text-7xl text-5xl text-white">Fairwind Charters</h1>
-          <h2 class="text-white sm:text-2xl font-page-title">Private yacht charters for all occassions</h2>
+        <div class="h-screen flex flex-col justify-center items-center bg-black bg-opacity-20">
+          <h1 class="title font-logo md:text-9xl sm:text-7xl text-5xl text-white text-shadow-md">Fairwind Charters</h1>
+          <h2 class="text-white sm:text-2xl font-page-title text-shadow-md">Private yacht charters for all occassions</h2>
           <nuxt-link
             to="/contact"
             class="mt-4 whitespace-nowrap inline-flex whitespace-nowrap
