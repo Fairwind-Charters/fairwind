@@ -1,23 +1,35 @@
 <template>
   <div class="page-content grid md:grid-flow-col grid-flow-row">
     <div class="contact-content-wrapper mx-auto px-6">
-      <div class="flex flex-col text-gray-800 md:p-6">
-        <span class="font-bold uppercase">Phone</span>
-        <span class="my-2"><a :href="`tel:${contact.phone}`" class="text-md hover:text-blue-500">{{ contact.phone }}</a></span>
-        <span class="font-bold uppercase">E-mail</span>
-        <span class="my-2">
-          <a :href="`mailto:${contact.email}`" class="text-md hover:text-blue-500">
-            {{ contact.email }}
-          </a>
-        </span>
-        <span class="font-bold uppercase">Follow Us</span>
-        <div class="social-media-links text-4xl">
-          <a :href="contact.facebook" target="_blank">
-            <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
-          </a>
-          <a :href="contact.instagram" target="_blank">
-            <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' } "/>
-          </a>
+      <div class="sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
+        <div class="flex flex-col text-gray-800 md:p-6">
+          <span class="font-bold uppercase">Phone</span>
+          <span class="my-2"><a :href="`tel:${contact.phone}`" class="text-md hover:text-blue-500">{{ contact.phone }}</a></span>
+          <span class="font-bold uppercase">E-mail</span>
+          <span class="my-2">
+            <a :href="`mailto:${contact.email}`" class="text-md hover:text-blue-500">
+              {{ contact.email }}
+            </a>
+          </span>
+          <span class="font-bold uppercase">Follow Us</span>
+          <div class="social-media-links text-4xl">
+            <a :href="contact.facebook" target="_blank">
+              <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
+            </a>
+            <a :href="contact.instagram" target="_blank">
+              <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' } "/>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row p-4">
+          <div class="font-light text-gray-800 text-md p-4 flex flex-col align-center">
+            <p class="mt-3 text-center md:text-left">Edgewater Marina</p>
+            <p class="mt-2 text-center md:text-left">989 River Rd</p>
+            <p class="mt-2 text-center md:text-left">Edgewater NJ, 07020</p>
+          </div>
+          <div class="w-full md:w-1/2">
+            <iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Fairwind%20Charters%20Edgewater%20Marina+(Fairwind%20Charters)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          </div>
         </div>
       </div>
       <form class="w-full md:p-6">

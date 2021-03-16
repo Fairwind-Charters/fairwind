@@ -1,7 +1,7 @@
 <template>
   <div class="page-content grid md:grid-flow-col grid-flow-row">
     <div class="crew-content-wrapper mx-auto px-6">
-      <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
+      <div class="container mx-auto mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
         <span>{{ content.body }}</span>
       </div>
       <div class="container my-12 mx-auto px-4 md:px-12">

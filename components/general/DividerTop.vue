@@ -1,5 +1,5 @@
 <template>
-  <div class="dvdr-top w-screen flex justify-center align-center p-12 bg-fairwind-light-blue"></div>
+  <div class="dvdr-top w-screen flex justify-center align-center p-12"></div>
 </template>
 
 <style lang="postcss" scoped>
