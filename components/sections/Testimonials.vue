@@ -6,7 +6,7 @@
     <div class="container mx-auto py-8 px-4 md:px-12">
         <div class="flex flex-wrap -mx-1 lg:-mx-4">
           <div v-for="(testimonial, index) in content.list" :key="index" class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4">
-            <article class="overflow-hidden rounded-lg shadow-lg">
+            <article class="overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
               <div class="bg-cover bg-center w-full h-48" :style="{ backgroundImage: `url(${testimonial.image})` }">
               </div>
               <header class="flex items-left justify-between leading-tight p-2 md:p-4">
