@@ -3,6 +3,9 @@
     <client-only>
       <video-background
         :src="require(`~/static/video/hero_video_updated.mp4`)"
+        poster="/img/IMG_5388.jpeg"
+        preload="none"
+        playsWhen="canplaythrough"
         class="h-screen"
       >
         <div class="h-screen flex flex-col justify-center items-center bg-black bg-opacity-20">
