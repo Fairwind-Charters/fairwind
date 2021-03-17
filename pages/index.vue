@@ -2,7 +2,7 @@
   <main class="main text-center flex flex-col items-center justify-center">
     <client-only placeholder="video">
       <video-background
-        :src="require(`~/static/video/hero_video.mp4`)"
+        :src="require(`~/static/video/hero_video_updated.mp4`)"
         class="h-screen"
       >
         <div class="h-screen flex flex-col justify-center items-center bg-black bg-opacity-20">
