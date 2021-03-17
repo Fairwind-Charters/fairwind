@@ -135,6 +135,8 @@ export default {
       /(^|\.)svg-/,
       /(^|\.)boat-gallery-wrapper/,
       /boat-gallery-wrapper(.*)/,
+      /pswp/,
+      /pswp(.*)/,
     ]
   },
   colorMode: {
