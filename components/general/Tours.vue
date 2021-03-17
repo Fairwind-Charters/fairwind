@@ -10,7 +10,7 @@
       </div>
       <div v-for="(tour, index) in tours" :key="index" class="column" :style="{ backgroundImage: `url(${tour.image})` }">
         <div class="font-page-title h-full flex flex-col justify-center text-white text-xl md:text-3xl column-inner whitespace-no-wrap">
-          <h3 class="z-10 text-shadow-md">{{ tour.name }}</h3>
+          <h2 class="z-10 text-shadow-md">{{ tour.name }}</h2>
           <span class="z-10 text-shadow-md">{{ tour.length }}</span>
           <span class="z-10 text-shadow-md">{{ tour.cost }}</span>
           <div class="absolute tour-description text-sm md:text-xl font-sans md:w-6/12">

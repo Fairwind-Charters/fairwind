@@ -13,7 +13,7 @@
           <p class="experience-el-text text-white text-3xl font-bold transform rotate-270 whitespace-nowrap text-shadow-md mb-6">{{ option.title }}</p>
         </div>
       </div>
-      <div class="w-full bg-fairwind-medium-blue flex items-center pt-8 pb-12">
+      <div class="w-full bg-fairwind-medium-blue flex items-center pt-12 pb-12">
         <div class="container mx-auto px-2 lg:text-2xl">
           <p class="text-fairwind-light-blue font-light">Make your special event a trip to remember.</p>
           <p class="text-fairwind-light-blue font-light">Let us know what you have in mind!</p>
@@ -28,8 +28,8 @@
           </nuxt-link>
           <nuxt-link
             to="/faqs"
-            class="text-fairwind-light-blue mt-2 underline block">
-            Learn more
+            class="text-fairwind-light-blue mt-1 underline block">
+            Faqs
           </nuxt-link>
         </div>
       </div>
