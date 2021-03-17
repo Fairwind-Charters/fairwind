@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style lang="postcss">
+<style lang="css">
 .boat-gallery-wrapper .my-gallery {
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
