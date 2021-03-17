@@ -4,19 +4,21 @@
       <div class="sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
         <div class="flex flex-col text-gray-800 md:p-6">
           <span class="font-bold uppercase">Phone</span>
-          <span class="my-2"><a :href="`tel:${contact.phone}`" class="text-md hover:text-blue-500">{{ contact.phone }}</a></span>
+          <span class="my-2"><a :href="`tel:${contact.phone}`" class="text-md hover:text-blue-500" rel="noreferrer">{{ contact.phone }}</a></span>
           <span class="font-bold uppercase">E-mail</span>
           <span class="my-2">
-            <a :href="`mailto:${contact.email}`" class="text-md hover:text-blue-500">
+            <a :href="`mailto:${contact.email}`" class="text-md hover:text-blue-500" rel="noreferrer">
               {{ contact.email }}
             </a>
           </span>
           <span class="font-bold uppercase">Follow Us</span>
           <div class="social-media-links text-4xl">
-            <a :href="contact.facebook" target="_blank">
+            <a :href="contact.facebook" target="_blank" rel="noreferrer">
+              <span class="sr-only">Link to Facebook</span>
               <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
             </a>
-            <a :href="contact.instagram" target="_blank">
+            <a :href="contact.instagram" target="_blank" rel="noreferrer">
+              <span class="sr-only">Link to Instagram</span>
               <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' } "/>
             </a>
           </div>
@@ -28,7 +30,7 @@
             <p class="mt-2 text-center md:text-left">Edgewater NJ, 07020</p>
           </div>
           <div class="w-full md:w-1/2">
-            <iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Fairwind%20Charters%20Edgewater%20Marina+(Fairwind%20Charters)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <iframe title="fairwind-charters-map" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Fairwind%20Charters%20Edgewater%20Marina+(Fairwind%20Charters)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
           </div>
         </div>
       </div>
