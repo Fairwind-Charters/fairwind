@@ -10,7 +10,6 @@ const dynamicContentPath = 'assets/content' // ? No prepending/appending backsla
 const dynamicRoutes = getDynamicPaths(
   {
     blog: 'blog/*.json',
-    projects: 'projects/*.json'
   },
   dynamicContentPath
 )
@@ -128,7 +127,17 @@ export default {
   purgeCSS: {
     mode: 'postcss',
     whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main',],
-    whitelistPatterns: [/^article/, /image$/, /(^|\.)fa-/, /-fa($|\.)/, /(^|\.)svg-/, /(^|\.)boat-gallery-wrapper/, 'my-gallery']
+    whitelistPatterns: [
+      /^article/,
+      /image$/,
+      /(^|\.)fa-/,
+      /-fa($|\.)/,
+      /(^|\.)svg-/,
+      /(^|\.)boat-gallery-wrapper/,
+      /boat-gallery-wrapper(.*)/,
+      /pswp/,
+      /pswp(.*)/,
+    ]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
