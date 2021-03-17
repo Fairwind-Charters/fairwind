@@ -1,8 +1,8 @@
 {
-  "name": "ntn-boilerplate",
+  "name": "Fairwind Charters",
   "version": "1.0.0",
-  "description": "Nuxt-Tailwind-NetlifyCMS boilerplate",
-  "author": "Sven Parker <sven@svenparker.com> (https://svenparker.com)",
+  "description": "Fairwind Charters - Boat Charters in NJ and NY",
+  "author": "Didac Bigorda Arruego <didacbigorda@gmail.com> (https://didacbigorda.dev)",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/knogobert/ntn-boilerplate#readme"
+    "url": "https://github.com/DidacBA/fairwind"
   },
   "license": "MIT",
   "dependencies": {
