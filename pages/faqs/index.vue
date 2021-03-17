@@ -1,16 +1,18 @@
 <template>
   <div class="page-content grid md:grid-flow-col grid-flow-row">
-    <div class="faqs-content-wrapper mx-auto px-6">
+    <div class="faqs-content-wrapper mx-auto pt-6 px-2 md:px-12">
       <div class="relative flex w-full flex-wrap items-stretch mb-3">
-        <span class="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+        <span class="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent text-2xl items-center justify-center w-8 pl-3 py-3">
           <font-awesome-icon :icon="['fas', 'search']"/>
         </span>
-        <input v-model="text" @input="filterFaqs" type="text" placeholder="Search..." class="px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pl-10"/>
+        <input v-model="text" @input="filterFaqs" type="text" placeholder="Search" class="px-6 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white text-2xl border-t-0 border-r-0 border-l-0 border-b border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pl-10"/>
         <p v-show="showSearchError" class="mt-4 font-light text-lg md:text-2xl">Your search had no results</p>
       </div>
-      <div v-for="(faq, index) in faqs" :key="index" class="text-lg md:text-2xl">
-        <p class="font-light mb-1">{{ faq.question }}</p>
-        <p class="mb-6 p-2 text-fairwind-medium-blue bg-fairwind-light-blue">{{ faq.answer }}</p>
+      <div class="pt-6">
+        <div v-for="(faq, index) in faqs" :key="index" class="text-lg md:text-2xl">
+          <p class="font-light mb-1">{{ faq.question }}</p>
+          <p class="mb-6 p-2 text-fairwind-medium-blue bg-fairwind-light-blue">{{ faq.answer }}</p>
+        </div>
       </div>
     </div>
     <div class="mx-auto md:flex md:flex-col md:items-end md:h-screen md:w-full md:sticky inset-y-0 row-start-1 md:row-auto">

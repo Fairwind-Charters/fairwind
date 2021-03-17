@@ -1,6 +1,6 @@
 <template>
   <main class="main text-center flex flex-col items-center justify-center">
-    <client-only placeholder="video">
+    <client-only>
       <video-background
         :src="require(`~/static/video/hero_video_updated.mp4`)"
         class="h-screen"

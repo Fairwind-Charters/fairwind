@@ -16,6 +16,13 @@
       <div class="boat-gallery-wrapper py-4">
         <client-only>
           <vue-picture-swipe :items="images" />
+          <template slot="placeholder">
+            <div class="my-gallery">
+              <figure></figure>
+              <a></a>
+              <img></img>
+            </div>
+          </template>
         </client-only>
       </div>
     </div>
@@ -51,7 +58,7 @@ export default {
 }
 </script>
 
-<style lang="postcss">
+<style lang="css">
 .boat-gallery-wrapper .my-gallery {
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
