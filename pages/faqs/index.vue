@@ -10,7 +10,7 @@
       </div>
       <div v-for="(faq, index) in faqs" :key="index" class="text-lg md:text-2xl">
         <p class="font-light mb-1">{{ faq.question }}</p>
-        <p class="mb-6 p-2 text-fairwind-medium-blue bg-fairwind-light-blue transform transition duration-500 hover:scale-105">{{ faq.answer }}</p>
+        <p class="mb-6 p-2 text-fairwind-medium-blue bg-fairwind-light-blue">{{ faq.answer }}</p>
       </div>
     </div>
     <div class="mx-auto md:flex md:flex-col md:items-end md:h-screen md:w-full md:sticky inset-y-0 row-start-1 md:row-auto">
