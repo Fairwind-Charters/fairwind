@@ -15,7 +15,7 @@
                 </p>
               </header>
               <footer class="flex items-right justify-between leading-none px-2 md:px-4 pb-2 md:pb-4">
-                <a class="flex items-center no-underline hover:underline text-black" href="#">
+                <a class="flex items-center no-underline hover:underline text-black" href="#" rel="noreferrer">
                   <p class="ml-2 text-sm text-fairwind-medium-blue text-right">
                     {{ testimonial.customername }}
                   </p>

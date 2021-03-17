@@ -33,10 +33,12 @@
         </nav>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <div class="social-media-links text-fairwind-medium-blue text-4xl">
-            <a :href="contact.facebook" target="_blank">
+            <a :href="contact.facebook" target="_blank" rel="noreferrer">
+              <span class="sr-only">Link to Facebook</span>
               <font-awesome-icon :icon="['fab', 'facebook']"/>
             </a>
-            <a :href="contact.instagram" target="_blank" class="ml-1">
+            <a :href="contact.instagram" target="_blank" class="ml-1" rel="noreferrer">
+              <span class="sr-only">Link to Instagram</span>
               <font-awesome-icon :icon="['fab', 'instagram']"/>
             </a>
           </div>
@@ -96,10 +98,12 @@
             <div class="flex items-center justify-end">
               <div class="social-media-links text-fairwind-medium-blue text-lg w-full flex p-2">
                 <div class="w-full text-5xl flex justify-end">
-                  <a :href="contact.facebook" target="_blank">
+                  <a :href="contact.facebook" target="_blank" rel="noreferrer">
+                    <span class="sr-only">Link to Facebook</span>
                     <font-awesome-icon :icon="['fab', 'facebook']"/>
                   </a>
-                  <a :href="contact.instagram" target="_blank" class="ml-4">
+                  <a :href="contact.instagram" target="_blank" class="ml-4" rel="noreferrer">
+                    <span class="sr-only">Link to Instagram</span>
                     <font-awesome-icon :icon="['fab', 'instagram']"/>
                   </a>
                 </div>
