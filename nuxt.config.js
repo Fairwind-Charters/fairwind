@@ -134,10 +134,7 @@ export default {
       /-fa($|\.)/,
       /(^|\.)svg-/,
       /(^|\.)boat-gallery-wrapper/,
-      /my-gallery/,
-      /my-gallery figure/,
-      /my-gallery figure a img/,
-      /my-gallery figure a img:hover/,
+      /boat-gallery-wrapper(.*)/,
     ]
   },
   colorMode: {
