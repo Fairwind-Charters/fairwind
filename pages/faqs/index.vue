@@ -23,6 +23,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'Fairwind Charters: FAQs',
+    }
+  },
   computed: {
     content() {
       return this.$store.state.siteContent.faqs
@@ -55,6 +60,7 @@ export default {
     font-size: 10vw;
     width: 10vw;
     top: 1.25em;
+    right: 2px;
   }
 }
 .faqs-content-wrapper {

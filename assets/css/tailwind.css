@@ -8,6 +8,7 @@
   font-style: normal;
   font-weight: normal;
   src: local('South Blue'), url(~assets/fonts/SouthBlue.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {
@@ -15,6 +16,7 @@
   font-style: normal;
   font-weight: normal;
   src: local('Lato-Regular'), url(~assets/fonts/Lato-Regular.ttf) format('ttf');
+  font-display: swap;
 }
 
 @font-face {

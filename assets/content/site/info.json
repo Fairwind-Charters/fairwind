@@ -1,5 +1,34 @@
 {
   "sitename": "Fairwind Charters",
-  "sitedescription": "Fairwind Charters description",
-  "sitelang": "en-US"
+  "sitedescription": "Boat charters in the New York Metropolitan area (New York and New Jersey)",
+  "sitelang": "en-US",
+  "siteemail": "info@fairwindcharters.com",
+  "keywords": [
+    {
+      "keyword": "boat"
+    },
+    {
+      "keyword": "new york"
+    },
+    {
+      "keyword": "new jersey"
+    },
+    {
+      "keyword": "NY"
+    },
+    {
+      "keyword": "NJ"
+    },
+    {
+      "keyword": "rental"
+    },
+    {
+      "keyword": "charter"
+    },
+    {
+      "keyword": "Jersey City"
+    }
+  ],
+  "siteurl": "https://www.fairwindcharters.com/",
+  "ogimage": "/img/IMG_5388.jpg"
 }

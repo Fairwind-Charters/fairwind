@@ -39,6 +39,18 @@ export default {
         hid: 'description',
         name: 'description',
         content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
+      },
+      {
+        name: 'keywords',
+        content: SITE_INFO.keywords.map((x) => x.keyword).join(', ') || ''
+      },
+      {
+        name: 'og:image',
+        content: `${SITE_INFO.siteurl}${SITE_INFO.ogimage}` || ''
+      },
+      {
+        name: 'og:url',
+        content: SITE_INFO.siteurl || ''
       }
     ],
     link: [

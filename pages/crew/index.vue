@@ -36,6 +36,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'Fairwind Charters: Meet our crew',
+    }
+  },
   computed: {
     content() {
       return this.$store.state.siteContent.crew
