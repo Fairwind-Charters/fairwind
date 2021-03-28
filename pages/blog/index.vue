@@ -29,6 +29,11 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: 'Fairwind Charters Blog',
+    }
+  },
   computed: {
     blogPosts() {
       return this.$store.state.blogPosts
