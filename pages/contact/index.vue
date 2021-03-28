@@ -34,8 +34,8 @@
           </div>
         </div>
       </div>
-      <form class="w-full md:p-6" name="contactus" action="/thanks" method="post" netlify netlify-honeypot="bot-field">
-        <input type="hidden" name="formname" value="contactus" />
+      <form class="w-full md:p-6" name="contactus" action="/thanks" method="post" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+        <input type="hidden" name="contactus" value="contactus" />
         <div class="flex flex-wrap -mx-3 mb-6">
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -70,6 +70,7 @@
             <p :class="[ msgError ? 'block' : 'hidden' ]" class="text-red-500 text-xs italic">Please fill out this field</p>
           </div>
         </div>
+        <div data-netlify-recaptcha="true"></div>
         <div class="md:flex md:items-center">
           <div class="md:w-1/3">
             <button @click="validate" class="shadow bg-fairwind-pink-100 hover:bg-fairwind-pink-200 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit" value="Send message">
