@@ -62,9 +62,9 @@
           </div>
           <div class="w-full md:w-1/2 px-3">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-phone">
-              Last Name
+              Phone number
             </label>
-            <input v-model="lastname" :class="[ lastnameError ? 'border-red-500' : 'border-gray-200' ]"  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="phone" name="phone" type="phone" placeholder="Doe">
+            <input v-model="lastname" :class="[ lastnameError ? 'border-red-500' : 'border-gray-200' ]"  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="phone" name="phone" type="tel" placeholder="000-000-0000">
             <p :class="[ lastnameError ? 'block' : 'hidden' ]" class="text-red-500 text-xs italic hidden">Please fill out this field.</p>
           </div>
         </div>
