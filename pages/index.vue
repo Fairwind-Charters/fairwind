@@ -1,46 +1,9 @@
 <template>
   <main class="main text-center flex flex-col items-center justify-center">
-    <client-only>
-      <video-background
-        :src="require(`~/static/video/hero_video_updated.mp4`)"
-        poster="/img/IMG_5388.jpeg"
-        preload="none"
-        playsWhen="canplaythrough"
-        class="h-screen"
-      >
-        <div class="h-screen flex flex-col justify-center items-center bg-black bg-opacity-20">
-          <h1 class="title font-logo md:text-9xl sm:text-7xl text-5xl text-white text-shadow-md">Fairwind Charters</h1>
-          <h2 class="text-white sm:text-2xl font-page-title text-shadow-md">Private yacht charters for all occassions</h2>
-          <nuxt-link
-            to="/contact"
-            class="mt-4 whitespace-nowrap inline-flex whitespace-nowrap
-              items-center justify-center px-8 py-2 border text-xl
-              border-transparent rounded-md shadow-sm
-              font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200"
-          >
-            Contact Us
-          </nuxt-link>
-        </div>
-      </video-background>
-      <template #placeholder>
-        <div class="h-screen flex flex-col justify-center items-center bg-black bg-opacity-20" style="background: linear-gradient(45deg,#2a4ae430,#fb949e6b);">
-          <h1 class="title font-logo md:text-9xl sm:text-7xl text-5xl text-white">Fairwind Charters</h1>
-          <h2 class="text-white sm:text-2xl font-page-title">Private yacht charters for all occassions</h2>
-          <nuxt-link
-            to="/contact"
-            class="mt-4 whitespace-nowrap inline-flex whitespace-nowrap
-              items-center justify-center px-8 py-2 border text-xl
-              border-transparent rounded-md shadow-sm
-              font-medium text-white bg-fairwind-pink-100 hover:bg-fairwind-pink-200"
-          >
-            Contact Us
-          </nuxt-link>
-        </div>
-      </template>
-    </client-only>
+    <LandingHero />
     <DividerTop class="bg-fairwind-light-blue" />
     <div class="w-screen flex justify-center align-center p-16 md:py-12 bg-fairwind-light-blue">
-      <p class="container mx-auto text-fairwind-medium-blue font-light text-lg">We provide private yacht charters at an affordable price in the New York/New Jersey area. Our goal is to get you out on the water and having fun while maintaining the highest standards of safety and service. Please contact us and we will be happy to answer any questions. Everything is more fun on a boat!</p>
+      <p class="container mx-auto text-fairwind-medium-blue font-light text-lg">{{ content.introtext }}</p>
     </div>
     <DividerBottom />
     <section id="tours" class="w-screen">
@@ -81,6 +44,7 @@ import BuildYourOwn from '~/components/sections/BuildYourOwn'
 import Testimonials from '~/components/sections/Testimonials'
 import DividerTop from '~/components/general/DividerTop'
 import DividerBottom from '~/components/general/DividerBottom'
+import LandingHero from '~/components/sections/LandingHero'
 export default {
   layout: 'home',
   components: {
@@ -90,12 +54,18 @@ export default {
     BuildYourOwn,
     Testimonials,
     DividerTop,
-    DividerBottom
+    DividerBottom,
+    LandingHero
   },
   head() {
     return {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
     }
+  },
+  computed: {
+    content() {
+      return this.$store.state.siteContent.hero
+    },
   }
 }
 </script>

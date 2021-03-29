@@ -44,6 +44,9 @@ export default {
     width: 10vw;
     top: 3.5em;
   }
+  @media (min-width: 1600px) {
+    font-size: 160px;
+  }
 }
 .about-us-image {
   @media (max-width: 768px) {

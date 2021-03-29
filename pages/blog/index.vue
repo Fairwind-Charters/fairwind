@@ -55,6 +55,9 @@ export default {
     width: 10vw;
     top: 1.8em;
   }
+  @media (min-width: 1600px) {
+    font-size: 160px;
+  }
 }
 .featured-article {
   width: 80vw;

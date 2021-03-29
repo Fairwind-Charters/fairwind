@@ -102,6 +102,9 @@ export default {
     width: 10vw;
     top: 4em;
   }
+  @media (min-width: 1600px) {
+    font-size: 160px;
+  }
 }
 .tour-description {
   white-space: initial;
