@@ -56,6 +56,9 @@ export default {
     width: 10vw;
     top: 3.5em;
   }
+  @media (min-width: 1600px) {
+    font-size: 160px;
+  }
 }
 .cards {
   height: 30rem;

@@ -78,7 +78,7 @@ collections:
           preview: false
         fields:
           - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
-          - { label: 'Video Url', name: 'videourl', widget: 'string' }
+          - { label: 'Video', name: 'video', widget: 'file', default: '/video/hero_video_updated.mp4' }
           - { label: 'Image', name: 'image', widget: 'image', required: true, allow_multiple: false }
           - { label: 'Intro Text', name: 'introtext', widget: 'markdown' }
       - label: 'Our Tours'

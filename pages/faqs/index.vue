@@ -62,6 +62,9 @@ export default {
     top: 1.25em;
     right: 2px;
   }
+  @media (min-width: 1600px) {
+    font-size: 160px;
+  }
 }
 .faqs-content-wrapper {
   width: 90vw;
