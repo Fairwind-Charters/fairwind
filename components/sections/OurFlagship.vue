@@ -2,7 +2,7 @@
   <div class="copy-and-gallery bg-fairwind-medium-blue pb-24">
     <div class="video-container v-full bg-cover bg-center text-white" :style="{ backgroundImage: `url(${videoThumbnail})` }">
       <div class="p-32">
-        <a :href="content.videourl" target="_blank" class="text-6xl" rel="noreferrer">
+        <a v-if="showVideoLink" :href="content.videourl" target="_blank" class="text-6xl" rel="noreferrer">
           <span class="sr-only">Link to boat video</span>
           <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'youtube' } "/>
         </a>
@@ -35,6 +35,11 @@ export default {
   components: {
     DividerBottom
   },
+  data() {
+    return {
+      showVideoLink: true,
+    }
+  },
   computed: {
     content() {
       return this.$store.state.siteContent.flagship
@@ -50,9 +55,18 @@ export default {
       }));
     },
     videoThumbnail() {
-      const { videourl } = this.$store.state.siteContent.flagship;
-      const id = videourl.split('watch?v=').pop();
-      return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`
+      const { videourl, useThumbnail, fallbackImg } = this.$store.state.siteContent.flagship
+      if (videourl && useThumbnail) {
+        const id = videourl.split('watch?v=').pop();
+        return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`
+      }
+      if (videourl && fallbackImg) {
+        return fallbackImg
+      }
+      if (!videourl) {
+        this.showVideoLink = false
+        return fallbackImg
+      }
     }
   },
 }

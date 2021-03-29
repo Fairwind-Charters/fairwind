@@ -130,6 +130,8 @@ collections:
           preview: false
         fields:
           - { label: 'Video URL', name: 'videourl', widget: 'string' }
+          - { label: 'Use Youtube thumbnail', name: 'useThumbnail', widget: 'boolean', default: true }
+          - { label: 'Fallback Image', name: 'fallbackImg', widget: 'image' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - label: 'Images'
             name: 'images'
