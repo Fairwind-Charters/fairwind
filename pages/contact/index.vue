@@ -64,8 +64,8 @@
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-phone">
               Phone number
             </label>
-            <input v-model="phone" :class="[ lastnameError ? 'border-red-500' : 'border-gray-200' ]"  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="phone" name="phone" type="tel" placeholder="000-000-0000">
-            <p :class="[ lastnameError ? 'block' : 'hidden' ]" class="text-red-500 text-xs italic hidden">Please fill out this field.</p>
+            <input v-model="phone" :class="[ phoneError ? 'border-red-500' : 'border-gray-200' ]"  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="phone" name="phone" type="tel" placeholder="000-000-0000">
+            <p :class="[ phoneError ? 'block' : 'hidden' ]" class="text-red-500 text-xs italic hidden">Please fill out this field.</p>
           </div>
         </div>
         <div class="flex flex-wrap -mx-3 mb-6">
@@ -77,7 +77,8 @@
             <p :class="[ msgError ? 'block' : 'hidden' ]" class="text-red-500 text-xs italic">Please fill out this field</p>
           </div>
         </div>
-        <div data-netlify-recaptcha="true"></div>
+        <div data-netlify-recaptcha="true" class="pb-2"></div>
+        <div v-show="showAlert" class="px-2">Please fill out all fields</div>
         <div class="md:flex md:items-center">
           <div class="md:w-1/3">
             <button @click="validate" class="shadow bg-fairwind-pink-100 hover:bg-fairwind-pink-200 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit" value="Send message">
@@ -107,6 +108,21 @@ export default {
     },
     contact() {
       return this.$store.state.siteContent.contactus
+    },
+    nameError() {
+      return this.name.trim() === '';
+    },
+    lastnameError() {
+      return this.lastname.trim() === '';
+    },
+    emailError() {
+      return this.email.trim() === '';
+    },
+    msgError() {
+      return this.msg.trim() === '';
+    },
+    phoneError() {
+      return this.phone.trim() === '';
     }
   },
   data() {
@@ -116,10 +132,18 @@ export default {
       phone: '',
       email: '',
       msg: '',
-      nameError: false,
-      lastnameError: false,
-      emailError: false,
-      msgError: false,
+      showAlert: false,
+    }
+  },
+  methods: {
+    validate(e) {
+      const isValid = !this.nameError && !this.lastnameError && !this.emailError && !this.msgError && !this.phoneError;
+      if (!isValid) {
+        e.preventDefault();
+        this.showAlert = true;
+      } else {
+        this.showAlert = false;
+      }
     }
   }
 }

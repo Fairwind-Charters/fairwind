@@ -4,7 +4,7 @@
       <div class="container mx-auto mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
         <span>{{ content.body }}</span>
       </div>
-      <div class="container my-12 mx-auto px-4 md:px-12">
+      <div v-if="content.members.length" class="container my-12 mx-auto px-4 md:px-12">
         <div class="flex flex-wrap -mx-1 lg:-mx-4">
         <!-- Column -->
           <div v-for="(member, index) in content.members" :key="index" class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4">
