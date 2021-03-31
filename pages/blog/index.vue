@@ -2,7 +2,7 @@
   <div class="page-content grid md:grid-flow-col grid-flow-row">
     <div class="faqs-content-wrapper mx-auto px-6">
       <div class="relative flex w-full items-stretch mb-3">
-        <div class="-mx-1 lg:-mx-4">
+        <div v-if="blogPosts.length" class="-mx-1 lg:-mx-4">
           <template v-for="(blogPost, index) in blogPosts">
             <nuxt-link :key="index" :to="`blog/${blogPost.slug}`" >
               <article class="flex flex-col shadow my-4" :class="[ index === 0 ? 'featured-article' : 'regular-article' ]">
@@ -19,6 +19,9 @@
               </article>
             </nuxt-link>
           </template>
+        </div>
+        <div v-else class="-mx-1 lg:-mx-4">
+          <h2>Check back soon for news about Fairwind Charters.</h2>
         </div>
       </div>
     </div>
