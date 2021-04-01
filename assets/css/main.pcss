@@ -10,3 +10,21 @@
 @import './_icons.pcss';
 @import './_btns.pcss'; */
 @import './_fontawesome.pcss';
+
+.boat-gallery-wrapper .my-gallery {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+.boat-gallery-wrapper .my-gallery figure {
+  flex-grow: 1;
+  min-width: 20%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.boat-gallery-wrapper .my-gallery figure a img {
+  border-radius: 1px;
+}
+.boat-gallery-wrapper .my-gallery figure a img:hover {
+  transform: scale(1.05);
+  transition: all 0.15s ease-in-out;
+}

@@ -39,6 +39,7 @@ export default {
   padding-top: 15vw;
 }
 .section-title {
+  z-index: 99;
   @media (min-width: 768px) {
     font-size: 10vw;
     width: 10vw;

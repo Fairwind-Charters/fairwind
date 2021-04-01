@@ -13,11 +13,19 @@
       <div class="p-4">
         <div v-html="$md.render(blogPost.body)" />
       </div>
+      <div class="p-4">
+        <Gallery :images="images" />
+      </div>
     </article>
   </div>
 </template>
 <script>
+import Gallery from '@/components/general/Gallery'
+
 export default {
+  components: {
+    Gallery,
+  },
   async asyncData({ params, payload }) {
     if (payload) return { blogPost: payload }
     else
@@ -30,6 +38,20 @@ export default {
       const date = new Date(dateString)
       return date.toLocaleDateString(process.env.lang) || ''
     }
+  },
+  computed: {
+    images() {
+      const gallery = this.blogpost?.gallery;
+      if (gallery) {
+        return gallery.map((img) => ({
+          src: img.src,
+          thumbnail: img.src,
+          w: 1200,
+          h: 900,
+        }));
+      }
+      return [];
+    },
   }
 }
 </script>

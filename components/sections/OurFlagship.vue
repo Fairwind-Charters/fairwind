@@ -13,27 +13,19 @@
     </div>
     <div class="copy container mx-auto px-4">
       <p class="text-left text-white font-light py-8">"{{ content.body }}</p>
-      <div class="boat-gallery-wrapper py-4">
-        <client-only>
-          <vue-picture-swipe :items="images" />
-          <template slot="placeholder">
-            <div class="my-gallery">
-              <figure></figure>
-              <a></a>
-              <img></img>
-            </div>
-          </template>
-        </client-only>
-      </div>
+      <Gallery :images="images" />
     </div>
   </div>
 </template>
 
 <script>
 import DividerBottom from '@/components/general/DividerBottom'
+import Gallery from '@/components/general/Gallery'
+
 export default {
   components: {
-    DividerBottom
+    DividerBottom,
+    Gallery
   },
   data() {
     return {
@@ -71,23 +63,3 @@ export default {
   },
 }
 </script>
-
-<style lang="css">
-.boat-gallery-wrapper .my-gallery {
-  display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
-}
-.boat-gallery-wrapper .my-gallery figure {
-  flex-grow: 1;
-  min-width: 20%;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.boat-gallery-wrapper .my-gallery figure a img {
-  border-radius: 1px;
-}
-.boat-gallery-wrapper .my-gallery figure a img:hover {
-  transform: scale(1.05);
-  transition: all 0.15s ease-in-out;
-}
-</style>

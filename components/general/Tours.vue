@@ -97,6 +97,7 @@ export default {
   margin-left: 1vw;
 }
 .section-title {
+  z-index: 99;
   @media (min-width: 768px) {
     font-size: 10vw;
     width: 10vw;

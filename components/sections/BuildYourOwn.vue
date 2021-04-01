@@ -15,7 +15,7 @@
       </div>
       <div class="w-full bg-fairwind-medium-blue flex items-center pt-12 pb-12">
         <div class="container mx-auto px-2 lg:text-2xl">
-          <p class="text-fairwind-light-blue font-light">Make your special event a trip to remember.</p>
+          <p class="text-fairwind-light-blue font-light">{{ content.sidetext }}</p>
           <p class="text-fairwind-light-blue font-light">Let us know what you have in mind!</p>
           <nuxt-link
             to="/contact"
@@ -59,7 +59,7 @@ export default {
 .experiences-grid {
   display: grid;
   grid-template-columns: 65% 35%;
-  grid-template-rows: 35vh;
+  grid-template-rows: 40vh;
   @media (max-width: 800px) {
     grid-template-columns: 100%;
   }

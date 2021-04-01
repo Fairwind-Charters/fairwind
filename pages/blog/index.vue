@@ -53,6 +53,7 @@ export default {
 
 <style lang="postcss" scoped>
 .section-title {
+  z-index: 99;
   @media (min-width: 768px) {
     font-size: 10vw;
     width: 10vw;
