@@ -59,7 +59,7 @@ export default {
 .experiences-grid {
   display: grid;
   grid-template-columns: 65% 35%;
-  grid-template-rows: 40vh;
+  grid-template-rows: 30rem;
   @media (max-width: 800px) {
     grid-template-columns: 100%;
   }
