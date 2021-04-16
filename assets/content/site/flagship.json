@@ -1,8 +1,8 @@
 {
-  "videourl": "",
-  "useThumbnail": true,
+  "videourl": "https://youtu.be/_NB1YaLmT4I",
+  "useThumbnail": false,
   "fallbackImg": "/img/0c4e014fd33b4f0663fbac467960b665.jpg",
-  "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, ante sed hendrerit blandit, est magna malesuada nunc, nec interdum nulla nulla quis nulla. Phasellus id ultrices quam, nec porttitor mi. Quisque efficitur fringilla sagittis. Quisque a mi eu ipsum commodo commodo sit amet sed libero. Quisque quis magna sit amet enim pellentesque varius. Duis sodales tellus est, in varius ipsum ultrices id. Phasellus accumsan sodales eros et malesuada. Vestibulum id enim scelerisque, interdum tellus id, congue massa. Ut ut nunc ac quam consequat elementum at ut est. Maecenas ut dui aliquet, sagittis purus ut, ultricies massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt turpis sit amet consectetur facilisis.",
+  "body": "The Piacere is a 40 foot spacious motor yacht with multiple decks and levels. Its a comfortable, relaxing ride! We have a restroom, bluetooth sound system, and plenty of seating. We'd love to have you aboard!",
   "images": [
     {
       "alt": "Boat gallery picture",
