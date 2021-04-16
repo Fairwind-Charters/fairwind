@@ -1,41 +1,29 @@
 {
-  "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, ante sed hendrerit blandit, est magna malesuada nunc, nec interdum nulla nulla quis nulla. Phasellus id ultrices quam, nec porttitor mi. Quisque efficitur fringilla sagittis. Quisque a mi eu ipsum commodo commodo sit amet sed libero. Quisque quis magna sit amet enim pellentesque varius. Duis sodales tellus est, in varius ipsum ultrices id. Phasellus accumsan sodales eros et malesuada. Quisque quis magna sit amet enim pellentesque varius. Phasellus id ultrices quam, nec porttitor mi.",
+  "body": "Our wonderful Captain and Crew will take the best care of you and make sure that you have fun and stay safe on your charter.",
   "members": [
     {
-      "name": "John",
+      "name": "Joel",
       "role": "Captain",
       "image": "/img/IMG_9681.jpeg",
-      "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, "
+      "blurb": "Captain"
     },
     {
-      "name": "Jim",
-      "role": "Captain",
+      "name": "Steve ",
+      "role": "Crew",
       "image": "/img/IMG_9681.jpeg",
-      "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, "
+      "blurb": "Crew"
     },
     {
-      "name": "James",
-      "role": "Captain",
+      "name": "Aidan",
+      "role": "Crew",
       "image": "/img/IMG_9681.jpeg",
-      "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, "
+      "blurb": "Crew"
     },
     {
-      "name": "Jonathan",
-      "role": "Captain",
+      "name": "Pitty ",
+      "role": "Crew",
       "image": "/img/IMG_9681.jpeg",
-      "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, "
-    },
-    {
-      "name": "Jameel",
-      "role": "Captain",
-      "image": "/img/IMG_9681.jpeg",
-      "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, "
-    },
-    {
-      "name": "Julian",
-      "role": "Captain",
-      "image": "/img/IMG_9681.jpeg",
-      "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta dictum malesuada. Praesent facilisis, "
+      "blurb": "Crew"
     }
   ]
 }
