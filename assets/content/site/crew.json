@@ -10,25 +10,26 @@
     {
       "name": "Steve ",
       "role": "Crew",
-      "image": "/img/IMG_9681.jpeg",
+      "image": "/img/anchor3.png",
       "blurb": "Crew"
     },
     {
       "name": "Aidan",
       "role": "Crew",
-      "image": "/img/IMG_9681.jpeg",
+      "image": "/img/anchor3.png",
       "blurb": "Crew"
     },
     {
       "name": "Pitty ",
       "role": "Crew",
-      "image": "/img/IMG_9681.jpeg",
+      "image": "/img/anchor3.png",
       "blurb": "Crew"
     },
     {
       "name": "Alexey ",
       "role": "Crew ",
-      "blurb": "Crew"
+      "blurb": "Crew",
+      "image": "/img/anchor3.png"
     }
   ]
 }
