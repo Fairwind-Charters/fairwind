@@ -35,6 +35,10 @@
     {
       "src": "/img/b6-min.jpg",
       "alt": "Boat Gallery Picture "
+    },
+    {
+      "alt": "Boat Gallery Picture ",
+      "src": "/img/b4-min.jpg"
     }
   ]
 }
