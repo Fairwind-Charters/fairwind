@@ -23,6 +23,10 @@
     {
       "question": "Can I rent the boat for a business party?",
       "answer": "Yes!"
+    },
+    {
+      "question": "Is there a restroom on the boat? ",
+      "answer": "Yes! "
     }
   ]
 }
