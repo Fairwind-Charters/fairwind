@@ -2,7 +2,7 @@
   "list": [
     {
       "question": "What is your base rate?",
-      "answer": "Our base rate is $299/hour with a 2 hour minimum."
+      "answer": "Our base rate is $350/hour with a 3 hour minimum."
     },
     {
       "question": "How many people does your boat fit?",
@@ -31,6 +31,10 @@
     {
       "question": "How do I make a booking?",
       "answer": "Call/email/text us for charter reservations. A 50% deposit is required at the time of booking. "
+    },
+    {
+      "question": "What happens if there is bad weather? ",
+      "answer": "In case of bad weather we can reschedule you charter for another date. "
     }
   ]
 }
